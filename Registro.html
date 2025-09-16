@@ -1,0 +1,132 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--TITULO DE LA PAGINA-->
+    <title>Registro LevelUp gamer</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Se llama el estilo del registro desde style.css -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+
+
+
+
+<!-- Ajusta al centro el formulario -->
+<body class="d-flex align-items-center justify-content-center vh-100">
+
+
+
+  
+
+
+
+
+  <div class="container col-md-6"> <!-- hace que el formulario se vea proporcionado  -->
+
+    <h1 class="text-center mb-4">Registro</h1>
+
+
+
+    <!-- id para luego trabajr con JS -->
+    <form id="registroForm" novalidate class="p-4 rounded bg-dark form-neon">
+
+
+
+
+  
+  <!-- Nombre completo -->
+  
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre completo</label>
+    <input type="text" class="form-control" id="nombre" required maxlength="50">
+    <div class="invalid-feedback">Por favor ingresa tu nombre (máx. 50 caracteres, solo letras y espacios).</div>
+  </div>
+
+
+
+
+
+
+      <div class="mb-3">
+        <label for="rut" class="form-label">RUT</label>
+        <input type="text" class="form-control" id="rut" placeholder="12345678-9 " required> <!-- placeholder para que el usuario vea el formato esperado -->
+        <div class="invalid-feedback">El RUT debe tener el formato correcto (12345678-9).</div>
+      </div>
+
+
+
+
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" name="correo" required autocomplete="email">  <!--El type="email" valida automáticamente que tenga forma de correo (algo@dominio.com).-->
+        <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
+      </div>
+
+
+
+
+
+      <div class="mb-3">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="number" class="form-control" id="edad" required>
+        <div class="invalid-feedback">Debes tener mínimo 18 años para registrarte.</div>
+      </div>
+
+
+
+
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" required>  <!--Type password para ue oculte los caracteres con punto-->
+        <div class="invalid-feedback">La contraseña es obligatoria.</div>
+      </div>
+
+
+      <!-- Boton de envio del formulario -->
+      <button type="submit" class="btn btn-gamer w-100">Registrarse</button>
+
+
+      
+    </form>
+  </div>
+
+
+
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Archivo JS propio -->
+  <script src="js/validaciones.js"></script>
+
+  <!-- script de sweetalert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+
+</body>
+</html>
