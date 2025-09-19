@@ -1,0 +1,66 @@
+/*====================================================
+Estilo personalizado para el offcanvas de login 
+/*====================================================*/
+
+.offcanvas-login-custom {
+  background-color: #111111; /* fondo oscuro personalizado */
+  border-left: 3px solid #bd0bf4 !important; /* borde izquierdo morado */
+  color: white; /* texto blanco */
+  box-shadow: 0 0 20px 5px #bd0bf4; /* sombra brillante morada */
+
+  /* Esquinas redondeadas en el lado izquierdo */
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+
+}
+
+.btn-close {
+  filter: invert(1); /* invierte los colores para que el botón sea visible en fondo oscuro */
+  opacity: 1; /* un poco transparente */
+  
+}
+
+.bi {
+  color: white;
+}
+
+
+.titulo-canvas {
+  color: white;
+}
+.form-label-canvas-correo {
+  color: white;
+}
+
+.form-label-canvas-contraseña {
+  color: white;
+}
+
+.form-check-label {
+  color: white;
+}
+
+.text-center-no-tiene-cuenta {
+  color: white;
+  margin-left: 70px;
+}
+
+.btn-primary-Entrar {
+  background-color: #bd0bf4;
+  color: white;
+}
+
+.btn-primary-Entrar:hover {
+  background-color: #9a0cc5; /* color cuando pasas el mouse */
+  color: white; /* aseguras que el texto siga en blanco */
+}
+
+
+
+
+
+/*====================================================
+FIN DE LA PERSONALIZACION DEL OFFCANVAS DE LOGIN
+/*====================================================*/
+

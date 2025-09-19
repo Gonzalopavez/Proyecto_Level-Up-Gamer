@@ -70,6 +70,7 @@ form.addEventListener("submit", function (e) {
       title: "¡Bienvenido!",
       text: `Has iniciado sesión como ${usuarioEncontrado.tipo}`,
       confirmButtonText: "Continuar",
+      confirmButtonColor: "#bd0bf4",
     }).then(() => {
       // Redirección según tipo de usuario
       switch (usuarioEncontrado.tipo) {

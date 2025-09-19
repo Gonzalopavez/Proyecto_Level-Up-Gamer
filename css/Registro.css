@@ -1,0 +1,136 @@
+
+
+/*====================================================
+Estilo del contorno + animacion del REGISTRO + personalizaciones
+/*====================================================*/
+
+
+
+h1.titulo-animado {
+  font-family: 'Audiowide', sans-serif;
+  color: #fff;
+  font-size: 1.9rem; 
+}
+
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'sans-serif', sans-serif;
+}
+
+
+
+
+.form-neon {
+  border: 2px solid #ffffff;
+  border-radius: 30px !important;
+  padding: 20px;
+  animation: neon-glow 1.4s ease-in-out infinite alternate;
+  box-shadow: 0 0 5px #1e90ff,
+              0 0 10px #1e90ff,
+              0 0 20px #1e90ff;
+  background-color: #000 !important;
+}
+
+@keyframes neon-glow {
+  from {
+    box-shadow: 0 0 5px #bd0bf4,
+                0 0 10px #bd0bf4,
+                0 0 15px #bd0bf4;
+  }
+  to {
+    box-shadow: 0 0 5px #bd0bf4,
+                0 0 10px #bd0bf4,
+                0 0 20px #bd0bf4,
+                0 0 30px #bd0bf4;
+  }
+}
+
+
+.btn-gamer {
+  background-color: #bd0bf4;
+  border: none;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.btn-gamer:hover {
+  background-color:  #9a00c9; 
+}
+
+.form-text-small-contraseña {
+  font-size: 0.875em; /* Tamaño de fuente más pequeño */
+  color: #fff; /* Color blanco */
+  margin-top: 5px; /* Espacio superior */
+}
+
+
+
+
+/*
+ * Este CSS usa la clase de Bootstrap 'btn-outline-secondary'
+ * y añade estilos de color para que se vea uniforme.
+ */
+
+.btn.toggle-password {
+    background-color: #bd0bf4; 
+    color: white;
+    border: none; /* Elimina el borde para que el input-group se vea como un solo elemento */
+    border-radius: 0 0.35rem 0.35rem 0 !important; /* solo redondea el lado derecho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.75rem;
+}
+
+
+
+
+
+
+.btn.btn.toggle-password:hover {
+  background-color: #fff;              /* fondo blanco al pasar el mouse */
+  color: #bd0bf4;                      /* texto morado */
+  box-shadow: 0 0 10px #bd0bf4,
+              0 0 20px #bd0bf4,
+              0 0 40px #bd0bf4;        /* brillo estilo neón */
+}
+
+
+.btn.btn.toggle-password:hover i {
+  color: #bd0bf4;                       /* morado neón solo para el ícono */
+}
+
+body {
+  min-height: 100vh;  /* asegura que siempre ocupe toda la ventana */
+  background-color: #121212;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px; /* opcional para un buen diseño */
+}
+
+/* Aplica a todo el título (ícono + texto) */
+.titulo-animado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; /* espacio entre ícono y texto */
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: aparecerTitulo 0.8s ease-out forwards;
+}
+
+
+@keyframes aparecerTitulo {
+  to {
+    opacity: 1;               /* termina visible */
+    transform: translateY(0); /* vuelve a su posición normal */
+  }
+}
+
+/*====================================================
+FIN DE PERSONALIZACION DEL REGISTRO
+/*====================================================*/

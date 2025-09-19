@@ -1,0 +1,103 @@
+
+
+/*====================================================
+Personalización del navbar + animacion del titulo
+/*====================================================*/
+
+
+/* Estilo básico para el texto del navbar */
+.navbar-brand {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 1.2rem; /* Ajusta el tamaño de la fuente*/
+  color: #fff; /* Color base para el texto */
+  text-transform: uppercase; /* Para poner todo en mayúsculas */
+}
+
+/* Estilo Neón solo en el texto del título */
+.neon-text {
+  color: #fff; /* Color del texto: Cian */
+  text-shadow: 
+    0 0 5px #1e90ff, 
+    0 0 10px #1e90ff, 
+    0 0 15px #1e90ff, 
+    0 0 20px #1e90ff, 
+    0 0 25px #1e90ff, 
+    0 0 30px #1e90ff, 
+    0 0 35px #1e90ff; /* Sombra para el resplandor neón */
+  animation: neonBlink 2.9s infinite alternate; /* Animación de parpadeo */
+}
+
+/* Animación de parpadeo neón */
+@keyframes neonBlink {
+  0% { text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 15px #1e90ff, 0 0 20px #1e90ff, 0 0 25px #1e90ff, 0 0 30px #1e90ff, 0 0 35px #1e90ff; }
+  50% { text-shadow: 0 0 5px #bd0bf4, 0 0 10px #bd0bf4, 0 0 15px #bd0bf4, 0 0 20px #bd0bf4, 0 0 25px #bd0bf4, 0 0 30px #bd0bf4, 0 0 35px #bd0bf4; }
+  100% { text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 15px #1e90ff, 0 0 20px #1e90ff, 0 0 25px #1e90ff, 0 0 30px #1e90ff, 0 0 35px #1e90ff; }
+}
+
+
+
+
+
+
+/* Aseguramos que el navbar use flexbox y sus hijos estén alineados verticalmente */
+.navbar {
+  display: flex;
+  align-items: center; /* Alinea todos los elementos verticalmente en el centro */
+}
+
+/* Estilo para el logo */
+.logo {
+  width: 100px;  /* Ajusta el tamaño */
+  height: 80px;  /* Mantén la altura proporcional */
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;  /* Alinea el logo con el texto */
+}
+
+
+/*====================================================
+FIN DE LA PERSONALIZACION DEL NAVBAR
+/*====================================================*/
+
+
+
+
+
+/*====================================================
+Botón de login en la navbar */
+/*====================================================*/
+
+
+
+.btn-login {
+  background-color: #bd0bf4;           /* azul visible desde el inicio */
+  border: 2px solid #bd0bf4;           /* mismo color del borde */
+  color: #fff;                         /* texto blanco */
+  border-radius: 50px;                   /* bordes redondeados tipo píldora */
+  padding: 6px 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-right: 20px; /* ajusta el espacio */
+  margin-left: 20px; /* ajusta el espacio */
+}
+
+
+
+.btn-login:hover i {
+  color: #bd0bf4;                       /* morado neón solo para el ícono */
+}
+
+
+.btn-login:hover {
+  background-color: #fff;              /* fondo blanco al pasar el mouse */
+  color: #bd0bf4;                      /* texto morado */
+  box-shadow: 0 0 10px #bd0bf4,
+              0 0 20px #bd0bf4,
+              0 0 40px #bd0bf4;        /* brillo estilo neón */
+}
+
+
+
+/*====================================================
+FIN DEL BOTON DEL NAVBAR LOGIN
+/*====================================================*/

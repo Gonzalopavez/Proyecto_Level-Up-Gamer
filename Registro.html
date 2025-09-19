@@ -1,27 +1,30 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <!--TITULO DE LA PAGINA-->
-    <title>Registro LevelUp gamer</title>
+  <!--TITULO DE LA PAGINA-->
+  <title>Registro | LevelUp Gamer</title>
 
 
+  <!-- Plantilla Bootstrap del Registro -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
 
   <!-- Se llama el estilo del registro desde style.css -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Registro.css">
 
+  <!-- Google Fonts para el titulo  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 </head>
 
@@ -30,18 +33,11 @@
 
 
 <!-- Ajusta al centro el formulario -->
-<body class="d-flex align-items-center justify-content-center vh-100">
-
-
-
-  
-
-
-
-
+<body class="d-flex justify-content-center py-5">
   <div class="container col-md-6"> <!-- hace que el formulario se vea proporcionado  -->
-
-    <h1 class="text-center mb-4">Registro</h1>
+    <h1 class="text-center mb-4 titulo-animado"> 
+      <i class="bi bi-person-plus me-2"></i> CREAR CUENTA 
+    </h1>
 
 
 
@@ -52,57 +48,157 @@
 
 
   
-  <!-- Nombre completo -->
+  <!-- Primer nombre  -->
   
   <div class="mb-3">
-    <label for="nombre" class="form-label">Nombre completo</label>
-    <input type="text" class="form-control" id="nombre" required maxlength="50">
+    <label for="nombre" class="form-label">Primer nombre</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" autocomplete="given-name"  required maxlength="50">
     <div class="invalid-feedback">Por favor ingresa tu nombre (máx. 50 caracteres, solo letras y espacios).</div>
+  </div>
+
+
+
+  <!-- Apellidos  -->
+
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Apellidos</label>
+    <input type="text" class="form-control" id="apellidos" name="apellidos" autocomplete="family-name" maxlength="100">
+    <div class="invalid-feedback">Por favor ingresa tus apellidos (máx. 100 caracteres, solo letras y espacios).</div>
   </div>
 
 
 
 
 
+  <!-- RUN -->
 
       <div class="mb-3">
-        <label for="rut" class="form-label">RUT</label>
-        <input type="text" class="form-control" id="rut" placeholder="12345678-9 " required> <!-- placeholder para que el usuario vea el formato esperado -->
-        <div class="invalid-feedback">El RUT debe tener el formato correcto (12345678-9).</div>
+        <label for="rut" class="form-label">RUN</label>
+        <input type="text" class="form-control" id="run" placeholder="12345678K " required minlength="7" maxlength="9" autocomplete="off"  > <!-- placeholder para que el usuario vea el formato esperado -->
+        <div class="invalid-feedback">El run debe ser válido (12345678K).</div>
       </div>
 
 
+
+  <!-- Correo electronico -->
 
 
       <div class="mb-3">
         <label for="correo" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="correo" name="correo" required autocomplete="email">  <!--El type="email" valida automáticamente que tenga forma de correo (algo@dominio.com).-->
-        <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
+        <input type="email" class="form-control" id="correo" name="correo" required maxlength="100" autocomplete="email" placeholder="Ejemplo.duoc.cl">  <!--El type="email" valida automáticamente que tenga forma de correo (algo@dominio.com).-->
+        <div class="invalid-feedback">  Por favor ingresa un correo válido con los dominios permitidos: @duoc.cl, @profesor.duoc.cl o @gmail.com.</div>
+      </div>
+
+      <div id="descuentoMensaje" class="alert alert-success mt-2 d-none">
+        ¡Felicidades! Como usuario DUOC, tienes un 20% de descuento de por vida.
       </div>
 
 
+  <!-- Contraseña -->
+  
+<div class="mb-3 password-wrapper">
+  <label for="password" class="form-label">Contraseña</label>
+
+  <div class="input-group">
+    <input type="password" class="form-control" id="password" name="password" required minlength="4" maxlength="10">
+    <button class="btn btn-outline-secondary toggle-password" type="button" data-target="password">
+      <i class="bi bi-eye"></i>
+    </button>
+  <div class="invalid-feedback">
+    La contraseña es obligatoria.
+  </div>
+  </div>
+
+  <div class="form-text-small-contraseña">
+    La contraseña debe tener entre 4 y 10 caracteres.
+  </div>
+</div>
 
 
 
-      <div class="mb-3">
-        <label for="edad" class="form-label">Edad</label>
-        <input type="number" class="form-control" id="edad" required>
-        <div class="invalid-feedback">Debes tener mínimo 18 años para registrarte.</div>
-      </div>
+<!-- Confirmar contraseña -->
+<div class="mb-3 password-wrapper">
+  <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+
+  <div class="input-group">
+    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+    <button class="btn btn-outline-secondary toggle-password" type="button" data-target="confirmPassword">
+      <i class="bi bi-eye"></i>
+    </button>
+    <div class="invalid-feedback">
+    Las contraseñas deben coincidir.
+  </div>
+  </div>
+</div>
 
 
+<!-- fecha de nacimiento -->
+<div class="mb-3">
+  <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+  <input type="text" id="fechaNacimiento" class="form-control" placeholder="dd/mm/aaaa" maxlength="10">
+  <div class="invalid-feedback">
+    Debes ingresar una fecha válida y ser mayor de 18 años.
+  </div>
+</div>
 
 
+<!-- Telefono ( opcional) -->
+<div class="mb-3">
+  <label for="telefono" class="form-label">Teléfono (opcional)</label>
+  <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu teléfono">
+  <div class="invalid-feedback">
+    Ingresa un teléfono válido (8 a 15 dígitos).
+  </div>
+</div>
 
-      <div class="mb-3">
-        <label for="password" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="password" required>  <!--Type password para ue oculte los caracteres con punto-->
-        <div class="invalid-feedback">La contraseña es obligatoria.</div>
-      </div>
+
+<!-- Direccion -->
+<div class="mb-3">
+  <label for="direccion" class="form-label">Dirección</label>
+  <input type="text" class="form-control" id="direccion" placeholder="Ingresa tu dirección">
+  <div class="invalid-feedback">
+    La dirección es requerida y no puede superar los 300 caracteres.
+  </div>
+</div>
+
+
+<!-- Region -->
+<div class="mb-3">
+  <label for="region" class="form-label">Región</label>
+  <select id="region" class="form-select">
+    <option value="">Selecciona una región</option>
+  </select>
+  <div class="invalid-feedback">
+    La región es requerida.
+  </div>
+</div>
+
+
+<!-- Comuna -->
+<div class="mb-3">
+  <label for="comuna" class="form-label">Comuna</label>
+  <select id="comuna" class="form-select" disabled>
+    <option value="">Selecciona una comuna</option>
+  </select>
+  <div class="invalid-feedback">
+    La comuna es requerida.
+  </div>
+</div>
+
+
+<!-- Código de referido -->
+<div class="mb-3">
+  <label for="codigoReferido" class="form-label">Código de referido (opcional)</label>
+  <input type="text" id="codigoReferido" class="form-control" maxlength="20" placeholder="Ingresa tu código">
+  <div class="invalid-feedback">
+    Código inválido (solo letras y números, máximo 20 caracteres)
+  </div>
+</div>
+
 
 
       <!-- Boton de envio del formulario -->
-      <button type="submit" class="btn btn-gamer w-100">Registrarse</button>
+      <button type="submit" class="btn btn-gamer w-100">Crear cuenta</button>
 
 
       
@@ -123,9 +219,6 @@
 
   <!-- script de sweetalert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-
 
 
 </body>

@@ -1,4 +1,4 @@
-// usuarios.js
+/* usuarios.js
 // Solo inicializa usuarios si no existen ya en localStorage
 if (!localStorage.getItem("usuarios")) {
   const usuariosIniciales = [
@@ -10,4 +10,4 @@ if (!localStorage.getItem("usuarios")) {
   console.log("Usuarios iniciales creados en localStorage ✅");
 } else {
   console.log("Usuarios ya existen en localStorage ✅");
-}
+}*/
