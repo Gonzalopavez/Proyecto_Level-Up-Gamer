@@ -101,3 +101,57 @@ Botón de login en la navbar */
 /*====================================================
 FIN DEL BOTON DEL NAVBAR LOGIN
 /*====================================================*/
+
+
+
+
+
+
+/*====================================================
+  Efectos Hover para los enlaces del Navbar
+====================================================*/
+
+/* Preparamos el contenedor del enlace para la animación */
+.navbar-nav .nav-link {
+    position: relative; /* Necesario para posicionar la línea de abajo */
+    transition: color 0.4s ease-out; /* Transición suave para el color del texto */
+    padding-bottom: 8px; /* Damos un poco de espacio para la línea */
+}
+
+/* Creamos la línea inferior, inicialmente oculta */
+.navbar-nav .nav-link::after {
+    content: ''; /* Pseudo-elemento necesita esto para mostrarse */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Grosor de la línea */
+    background-color: var(--primary-color, #bd0bf4); /* Usa tu color principal */
+    
+    /* Animación: la línea está escalada a 0 (invisible) */
+    transform: scaleX(0);
+    transform-origin: bottom right; /* La animación empezará desde la derecha */
+    transition: transform 0.4s ease-out; /* Transición suave para la animación de la línea */
+}
+
+/* Cuando pasamos el cursor sobre el enlace... */
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color, #bd0bf4) !important; /* Cambia el color del texto */
+}
+
+/* ... Y TAMBIÉN cambiamos el color del ícono que está adentro */
+.navbar-nav .nav-link:hover i {
+    color: var(--primary-color, #bd0bf4) !important;
+}
+
+/* ...también mostramos la línea animada */
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1); /* La línea se escala a su tamaño completo */
+    transform-origin: bottom left; /* La animación ahora va de izquierda a derecha */
+}
+
+/* Para el enlace activo (la página actual), dejamos la línea visible */
+.navbar-nav .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

@@ -18,8 +18,6 @@
 
   <link href="css/Navbar.css" rel="stylesheet"> 
   
-  <link href="css/Login.css" rel="stylesheet">
-  
   <link href="css/Offcanvas.css" rel="stylesheet"> 
   
   <link href="css/Index.css" rel="stylesheet"> 
@@ -44,44 +42,62 @@
 
 
   <!-- Barra de navegación-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <img src="img/logo.png" class="d-inline-block align-top logo" alt="Logo">
-    <a class="navbar-brand neon-text ms-2" href="#">LEVEL-UP GAMER</a>
 
-
-
-
-    <!-- Botón hamburguesa para móviles -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-
-
-    <!-- Opciones del menú -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Productos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="carrito.html">Carrito (0)</a>
-        </li>
-
-
-
-          <!-- 🔹 Nuevo: enlace que abre el offcanvas de login -->
-          <li class="nav-item" >
-
-              <a class="btn btn-login" data-bs-toggle="offcanvas" href="#offcanvasLogin" role="button" aria-controls="offcanvasLogin" >
-                <i class="bi bi-person"> </i> Iniciar sesión
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid"> <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="neon-text ms-2">LEVEL-UP GAMER</span>
             </a>
 
-          </li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        </ul>
-      </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" aria-current="page" href="index.html" aria-label="Home">
+                          <i class="bi bi-house-door-fill "></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+
+                
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="carrito.html">
+                            <i class="bi bi-cart"></i> Carrito (0)
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="bi bi-instagram fs-6"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2 ">
+                        <a class="btn btn-login" data-bs-toggle="offcanvas" href="#offcanvasLogin" role="button" aria-controls="offcanvasLogin">
+                            <i class="bi bi-person"></i> Iniciar sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+</header>
+
+
 
 
 
@@ -150,56 +166,6 @@
 
 
 
-  <!-- ===========================
-       Sección de productos (ejemplo)
-       =========================== -->
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://via.placeholder.com/200" class="card-img-top" alt="Producto 1">
-          <div class="card-body">
-            <h5 class="card-title">Producto 1</h5>
-            <p class="card-text">$10.00</p>
-            <button class="btn btn-primary btn-agregar">Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
-      <!-- puedes duplicar col-md-4 para más productos -->
-    </div>
-  </div>
-
-  <!-- ===========================
-       Carrito de compras (modal clásico)
-       =========================== -->
-  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content text-dark">
-        <div class="modal-header">
-          <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <ul id="cartItems" class="list-group">
-            <li class="list-group-item">Producto 1 - $10.00</li>
-          </ul>
-          <div class="mt-3">
-            <strong>Total: $10.00</strong>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Ir a pagar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
 
 
 
@@ -219,33 +185,23 @@
 
 
   <!-- ===========================
-       Footer
-       =========================== -->
+  Footer
+  =========================== -->
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p>&copy; 2025 LEVEL-UP GAMER. Todos los derechos reservados.</p>
   </footer>
 
+
+
+
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-   
+
   <!-- archivo JS para manejo de usuarios -->
   <script src="js/Usuarios.js"></script>
-
-
-
-
-  <!-- Script carrito mínimo -->
-<script>
-  document.querySelectorAll('.btn-agregar').forEach(button => {
-    button.addEventListener('click', function () {
-      alert('Producto agregado al carrito!');
-    });
-  });
-</script>
-
 
 
 
