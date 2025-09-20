@@ -5,39 +5,6 @@ Personalización del navbar + animacion del titulo
 /*====================================================*/
 
 
-/* Estilo básico para el texto del navbar */
-.navbar-brand {
-  font-family: 'Audiowide', sans-serif;
-  font-size: 1.2rem; /* Ajusta el tamaño de la fuente*/
-  color: #fff; /* Color base para el texto */
-  text-transform: uppercase; /* Para poner todo en mayúsculas */
-}
-
-/* Estilo Neón solo en el texto del título */
-.neon-text {
-  color: #fff; /* Color del texto: Cian */
-  text-shadow: 
-    0 0 5px #1e90ff, 
-    0 0 10px #1e90ff, 
-    0 0 15px #1e90ff, 
-    0 0 20px #1e90ff, 
-    0 0 25px #1e90ff, 
-    0 0 30px #1e90ff, 
-    0 0 35px #1e90ff; /* Sombra para el resplandor neón */
-  animation: neonBlink 2.9s infinite alternate; /* Animación de parpadeo */
-}
-
-/* Animación de parpadeo neón */
-@keyframes neonBlink {
-  0% { text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 15px #1e90ff, 0 0 20px #1e90ff, 0 0 25px #1e90ff, 0 0 30px #1e90ff, 0 0 35px #1e90ff; }
-  50% { text-shadow: 0 0 5px #bd0bf4, 0 0 10px #bd0bf4, 0 0 15px #bd0bf4, 0 0 20px #bd0bf4, 0 0 25px #bd0bf4, 0 0 30px #bd0bf4, 0 0 35px #bd0bf4; }
-  100% { text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 15px #1e90ff, 0 0 20px #1e90ff, 0 0 25px #1e90ff, 0 0 30px #1e90ff, 0 0 35px #1e90ff; }
-}
-
-
-
-
-
 
 /* Aseguramos que el navbar use flexbox y sus hijos estén alineados verticalmente */
 .navbar {
@@ -45,19 +12,57 @@ Personalización del navbar + animacion del titulo
   align-items: center; /* Alinea todos los elementos verticalmente en el centro */
 }
 
-/* Estilo para el logo */
-.logo {
-  width: 100px;  /* Ajusta el tamaño */
-  height: 80px;  /* Mantén la altura proporcional */
-  margin-top: 0;
-  margin-bottom: 0;
-  vertical-align: middle;  /* Alinea el logo con el texto */
+.logogamer {
+  width: 55px; 
+  height: 45px; 
+  vertical-align: middle;
 }
+
+
+
+/* Estilo básico para el texto del navbar */
+
+.navbar-brand {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 1rem; 
+  color: #fff; 
+  text-transform: uppercase; 
+}
+
+
+
+/* Estilo Neón solo en el texto del título */
+.neon-text {
+  color: #fff; /* Color del texto */
+  text-shadow: 
+    0 0 5px #bd0bf4, 
+    0 0 10px #bd0bf4, 
+    0 0 15px #bd0bf4, 
+    0 0 20px #bd0bf4, 
+    0 0 25px #bd0bf4, 
+    0 0 30px #bd0bf4, 
+    0 0 35px #bd0bf4; /* Sombra para el resplandor neón */
+  animation: neonBlink 2.9s infinite alternate; /* Animación de parpadeo */
+}
+
+
+
+/* POSIBLE ANIMACION DE PARPADEO NEON (Desactivada por ahora)
+
+@keyframes neonBlink {
+  0% { text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 15px #1e90ff, 0 0 20px #1e90ff, 0 0 25px #1e90ff, 0 0 30px #1e90ff, 0 0 35px #1e90ff; }
+  50% { text-shadow: 0 0 5px #bd0bf4, 0 0 10px #bd0bf4, 0 0 15px #bd0bf4, 0 0 20px #bd0bf4, 0 0 25px #bd0bf4, 0 0 30px #bd0bf4, 0 0 35px #bd0bf4; }
+  100% { text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 15px #1e90ff, 0 0 20px #1e90ff, 0 0 25px #1e90ff, 0 0 30px #1e90ff, 0 0 35px #1e90ff; }
+} */
+
+
 
 
 /*====================================================
 FIN DE LA PERSONALIZACION DEL NAVBAR
 /*====================================================*/
+
+
 
 
 

@@ -59,6 +59,14 @@ body {
   background-color:  #9a00c9; 
 }
 
+
+.btn-gamer.btn-lg {
+    padding: 12px 24px; /* Hacemos el botón más grande */
+    font-size: 1.2rem; /* Hacemos el texto del botón más grande */
+}
+
+
+
 .form-text-small-contraseña {
   font-size: 0.875em; /* Tamaño de fuente más pequeño */
   color: #fff; /* Color blanco */
