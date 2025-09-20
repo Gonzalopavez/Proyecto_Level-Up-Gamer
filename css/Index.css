@@ -1,35 +1,40 @@
 
-body {
-  background-color: black;
-  color: white; /* texto claro sobre fondo oscuro FONDOOO INDEXXX*/
-}
+
 
 
 /*===========================================
-  Ajuste para el Navbar Fijo
+Fondo Oscuro y Texto Claro de la pagina
 ===========================================*/
 
 body {
-  /* Añade un padding superior al cuerpo de la página para evitar que el contenido quede oculto detrás del navbar 
-  */
-  padding-top: 70px; 
+  background-color: black;
+  color: white; /* texto claro sobre fondo oscuro */
+  padding-top: 70px; /*padding superior al cuerpo de la página para evitar que el contenido quede oculto detrás del navbar */
+  
 }
 
 
 
 
+
+
+
 /*===========================================
-  Estilos para el Carrusel de Banner
+Estilos para el Carrusel de Banner
 ===========================================*/
 
 #heroCarousel {
   position: relative; /* Necesario para posicionar el botón */
 }
 
+
+
 .carousel-item {
-  height: 85vh; /* Altura del carrusel (65% de la altura de la ventana). Ajústalo si quieres. */
+  height: 85vh; /* Altura del carrusel */
   min-height: 400px; /* Altura mínima para pantallas pequeñas */
 }
+
+
 
 .carousel-image {
   width: 100%;
@@ -37,40 +42,35 @@ body {
   object-fit: cover; /* La imagen cubre todo el espacio sin deformarse */
 }
 
-/* Contenedor del botón */
+
+
+/* Contenedor del botón " Ver productos*/
 .carousel-caption-button {
   position: absolute;
   bottom: 20px; /* Distancia desde la parte inferior */
   left: 50%;
-  transform: translateX(-50%); /* Truco para centrar perfectamente el botón */
-  padding: 10px;
+  transform: translateX(-50%); /*centrar perfectamente el botón de " ver productos */
+  padding: 10px; /* esto hace que el boton suba de posicion */
 }
 
-/*===========================================
-  Ajustes para el botón del carrusel
-===========================================*/
 
-/* Usamos un selector específico para que estos estilos
-  solo afecten al botón que está DENTRO del carrusel.
-*/
+
+
+/* Usamos un selector específico para que estos estilos solo afecten al botón que está DENTRO del carrusel.*/
+
 #heroCarousel .btn-gamer {
-  /* --- Ajuste de Opacidad --- */
-  /* 1 es totalmente visible, 0 es invisible. 
-     Prueba valores como 0.7 o 0.8 para un efecto translúcido. */
-  opacity: 0.5;
 
-  /* --- Ajuste de Tamaño --- */
-  /* Hacemos el botón más pequeño cambiando su padding y el tamaño de la fuente. */
+  opacity: 0.5; /* --- Ajuste de Opacidad --- */
+
+  /* --- Ajuste de Tamaño y fuente cambiando el padding--- */
   padding: 8px 16px; 
-  font-size: 1rem; /* 1rem es el tamaño de fuente normal */
+  font-size: 1rem; 
 
-  /* --- Transición Suave (Opcional pero recomendado) --- */
   /* Esto hace que el botón se vuelva menos transparente al pasar el cursor. */
   transition: opacity 0.3s ease;
 }
 
 /* Efecto al pasar el cursor */
 #heroCarousel .btn-gamer:hover {
-  /* Al pasar el cursor, el botón se vuelve totalmente visible. */
   opacity: 1;
 }
