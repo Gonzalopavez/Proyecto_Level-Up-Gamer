@@ -6,12 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const correo = document.getElementById("loginCorreo");
     const password = document.getElementById("loginPassword");
     
-    // Este bloque detiene el envío del formulario si se presiona "Enter".
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-        });
-    }
+
 
     function obtenerUsuarios() {
         const usuarios = localStorage.getItem("usuarios");

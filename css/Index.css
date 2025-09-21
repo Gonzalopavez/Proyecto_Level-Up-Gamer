@@ -74,3 +74,39 @@ Estilos para el Carrusel de Banner
 #heroCarousel .btn-gamer:hover {
   opacity: 1;
 }
+
+
+
+
+
+
+/*===========================================
+  Estilos Personalizados para Tarjetas de Producto
+===========================================*/
+
+/*Estilo para el contorno de la tarjeta */
+.card {
+    border: 1px solid #bd0bf4; 
+    box-shadow: 0 0 10px rgba(189, 11, 244, 0.4); /* Sombra brillante sutil */
+    transition: all 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta */
+.card:hover {
+    transform: translateY(-5px); /* La tarjeta se eleva un poco */
+    box-shadow: 0 0 20px rgba(189, 11, 244, 0.7); /* La sombra se hace más intensa */
+}
+
+
+/* 2. Estilo para el botón de "Agregar al carrito" */
+
+.btn-gamer {
+    background-color: #bd0bf4; /* Color de fondo morado (puedes cambiarlo) */
+    border: none;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.btn-gamer:hover {
+    background-color: #9a00c9; /* Color de fondo más oscuro al pasar el cursor */
+}
