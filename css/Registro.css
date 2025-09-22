@@ -30,6 +30,12 @@ body {
 
 
 
+/* Añade más espacio superior al contenedor del formulario */
+.pagina-registro .container {
+    margin-top: 10vh; 
+}
+
+
 .form-neon {
   border: 2px solid #ffffff;
   border-radius: 30px !important;
