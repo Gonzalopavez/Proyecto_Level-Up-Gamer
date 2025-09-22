@@ -22,7 +22,6 @@
   
   <link href="css/index.css" rel="stylesheet"> 
 
-  <link href="css/registro.css" rel="stylesheet"> 
 
 
 
@@ -44,51 +43,41 @@
 
 
 
-<body>
+<body class="d-flex flex-column vh-100">
 
 
   <!-- Barra de navegación Navbar -->
 
-  <header>  
+<header> 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid"> 
-
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="img/logo.png" class="logogamer d-inline-block align-top" alt="Logo LevelUp Gamer">
                 <span class="neon-text ms-2">LEVEL-UP GAMER</span>
             </a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-2">
                         <a class="nav-link active" aria-current="page" href="index.html" aria-label="Home">
-                          <i class="bi bi-house-door-fill "></i></a>
+                            <i class="bi bi-house-door-fill"></i>
+                        </a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="productos.html">Productos</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="blogs.html">Blogs</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
 
-                
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item mx-3">
-                        <a class="nav-link" id="cart-link" href="Carrito.html">
-                        </a>
+                        <a class="nav-link" id="cart-link" href="Carrito.html"></a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <i class="bi bi-instagram fs-6"></i>
@@ -99,16 +88,14 @@
                             <i class="bi bi-person"></i> Iniciar sesión
                         </a>
                     </li>
-
-
                     <li id="user-menu" class="nav-item dropdown d-none ms-2">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-person-circle fs-5"></i>
-                      <span id="username-display"></span> </a>
-                      <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
-                    <li><a id="logout-link" class="dropdown-item" href="#">Cerrar Sesión</a>
-                    </li>
-                      </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-5"></i>
+                            <span id="username-display"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                            <li><a id="logout-link" class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -133,7 +120,7 @@
 <!-- Banner carrusel -->
 
 
-<main>
+<main class="flex-grow-1">
   <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
 
@@ -170,7 +157,16 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+
+  
   </section>
+
+  <div class="container my-5">
+      <h2 class="text-center mb-4">Nuestros Productos</h2>
+  <div id="productos-container" class="row">
+
+    </div>
+    </div>
 
 </main>
 

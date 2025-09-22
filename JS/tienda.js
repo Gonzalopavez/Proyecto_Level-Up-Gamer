@@ -33,6 +33,9 @@ function renderizarProductos(productos) {
 
   productos.forEach(producto => {
     const productoCard = document.createElement('div');
+    
+    
+    // Le decimos cómo comportarse en diferentes tamaños de pantalla.
     productoCard.className = 'col-lg-3 col-md-4 col-sm-6 mb-4';
 
     productoCard.innerHTML = `
