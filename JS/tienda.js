@@ -7,9 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Si el contenedor de productos existe, renderizamos los productos.
   if (productosContainer) {
     renderizarProductos(listaProductos);
-  }
 
-  // --- LÓGICA PARA AÑADIR AL CARRITO ---
+    // --- LÓGICA PARA AÑADIR AL CARRITO ---
 
   // Usamos "delegación de eventos" para escuchar clics en todo el contenedor.
   // Esto es más eficiente que añadir un listener a cada botón individualmente.
@@ -21,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       agregarAlCarrito(productId);
     }
   });
+  }
 });
 
 /**

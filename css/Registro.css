@@ -1,5 +1,13 @@
 
 
+/*OCULTAR BOTON DE INICIAR SESION EN EL LOGIN*/
+.pagina-registro #login-button {
+    display: none;
+}
+
+
+
+
 /*====================================================
 Estilo del contorno + animacion del REGISTRO + personalizaciones
 /*====================================================*/

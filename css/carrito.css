@@ -1,9 +1,6 @@
 
 
 
-/*Estilos para la Página del Carrito
-
-
 /* Estilo para la tarjeta de resumen */
 .card {
     border: 1px solid #bd0bf4; /* Borde con el color de marca */
@@ -19,7 +16,7 @@
 
 
 
-/* Estas configuracion de botones son para copiar el mismo estilo que tiene el boton de " iniciar sesion " 
+/* Estas 2 configuracion de botones son para copiar el mismo estilo que tiene el boton de " iniciar sesion " 
 (al pasar el cursos se activa un estilo neon blanco y morado*/
 
 
@@ -48,25 +45,7 @@
 
 
 
-.btn-secondary{
-  background-color: #bd0bf4;           
-  border: 2px solid #bd0bf4; 
-    
-}
-
-
-
-.btn-secondary:hover {
-  background-color: #fff;              
-  color: #bd0bf4;                      
-  box-shadow: 0 0 10px #bd0bf4,
-              0 0 20px #bd0bf4,
-              0 0 40px #bd0bf4;        
-}
-
-
-
-/* css/carrito.css */
+/* Estilos para los botones de cantidad  -  + */
 
 .btn-quantity {
     background-color: #bd0bf4; /* Tu color morado */
@@ -84,6 +63,8 @@
 .btn-quantity:hover {
     background-color: #9a00c9; /* Color más oscuro al pasar el cursor */
 }
+
+
 
 .quantity-display {
     font-size: 1.2rem; /* Tamaño del número de la cantidad */

@@ -49,6 +49,7 @@ Estilo personalizado para el offcanvas de login
 .btn-primary-Entrar {
   background-color: #bd0bf4;
   color: white;
+  border-radius: 50px;
 }
 
 .btn-primary-Entrar:hover {

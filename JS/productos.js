@@ -6,7 +6,7 @@ const listaProductos = [
     id: "prod-01",
     nombre: "Tarjeta Gráfica RTX 4090",
     precio: 1899990,
-    imagen: "img/productos/rtx4090.png" 
+    imagen: "img/rtx.jpg" 
   },
   {
     id: "prod-02",

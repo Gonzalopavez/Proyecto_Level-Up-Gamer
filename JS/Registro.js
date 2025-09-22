@@ -36,7 +36,6 @@ const regionesYComunas = [
     { nombre: "Región Metropolitana", comunas: ["Santiago", "Providencia", "Las Condes"] },
     { nombre: "Valparaíso", comunas: ["Valparaíso", "Viña del Mar", "Quilpué"] },
     { nombre: "Biobío", comunas: ["Concepción", "Talcahuano", "San Pedro de la Paz"] },
-    // Puedes agregar más regiones aquí
 ];
 
 
@@ -44,7 +43,6 @@ const regionesYComunas = [
 // ===============================================
 // sección 3: FUNCIONES DE UTILIDAD
 // ===============================================
-// Pequeñas funciones reutilizables que nos ayudan a no repetir código.
 
 /**
  * Muestra u oculta el estado de validación de un campo.
@@ -306,34 +304,30 @@ fechaNacimiento.addEventListener("input", (e) => {
 
 // --- Evento 'submit' para la validación final ---
 form.addEventListener("submit", (e) => {
-    e.preventDefault(); // Siempre prevenir el envío por defecto para validar con JS.
+    e.preventDefault(); // Siempre prevenir el envío por defecto.
 
-    // Ejecutamos TODAS las validaciones. Usamos el operador `&` (AND a nivel de bits)
-    // en lugar de `&&` (AND lógico). Esto asegura que TODAS las funciones se ejecuten
-    // y muestren su feedback visual, sin detenerse en el primer error que encuentren.
     const esValido = validarNombre() & validarApellidos() & validarRUN() &
                      validarCorreo() & validarPassword() & validarConfirmPassword() &
                      validarFechaNacimiento() & validarTelefono() & validarDireccion() &
                      validarRegion() & validarComuna() & validarCodigoReferido();
 
     if (esValido) {
-        // Si todo es correcto, procedemos a guardar los datos.
+        // Si todo es correcto, creamos el objeto de usuario.
         const usuario = {
             nombre: nombre.value.trim(),
             apellidos: apellidos.value.trim(),
             run: runInput.value.trim(),
             correo: correo.value.trim(),
-            password: password.value.trim(), // Recordatorio: No hacer esto en un proyecto real
+            password: password.value.trim(),
             fechaNacimiento: fechaNacimiento.value.trim(),
             telefono: telefono.value.trim(),
             direccion: direccion.value.trim(),
             region: regionSelect.value,
             comuna: comunaSelect.value,
             codigoReferido: codigoReferido.value.trim(),
-            tipo: "Cliente" // Asignamos el rol por defecto
+            tipo: "Cliente"
         };
         
-        // Simulación de guardado en localStorage
         try {
             let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
             if (usuarios.some(u => u.correo === usuario.correo)) {
@@ -343,16 +337,21 @@ form.addEventListener("submit", (e) => {
                     text: 'El correo electrónico que ingresaste ya está en uso.'
                 });
             } else {
+                // 1. Guardamos al usuario en nuestra "base de datos" permanente.
                 usuarios.push(usuario);
                 localStorage.setItem("usuarios", JSON.stringify(usuarios));
+                
+                // 2. También lo guardamos en sessionStorage para el auto-login.
+                sessionStorage.setItem('currentUser', JSON.stringify(usuario));
+
+                // 3. Mostramos la alerta de éxito.
                 Swal.fire({
                     icon: 'success',
                     title: '¡Registro exitoso!',
-                    text: 'Tu cuenta ha sido creada correctamente.'
+                    text: 'Tu cuenta ha sido creada. Serás redirigido.'
                 }).then(() => {
-                    form.reset(); // Limpiar formulario
-                    comunaSelect.disabled = true; // Deshabilitar comunas de nuevo
-                    descuentoMensaje.classList.add("d-none"); // Ocultar mensaje
+                    //4. Después de que el usuario presione "OK", lo redirigimos al home.
+                    window.location.href = 'index.html';
                 });
             }
         } catch (error) {

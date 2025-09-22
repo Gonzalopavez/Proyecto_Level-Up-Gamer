@@ -1,16 +1,18 @@
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Capturamos los elementos del DOM que necesitamos
     const carritoLista = document.getElementById('carrito-lista');
     const subtotalDisplay = document.getElementById('carrito-subtotal');
+    const descuentosDisplay = document.getElementById('carrito-descuentos');
     const totalDisplay = document.getElementById('carrito-total');
 
+    // --- FUNCIÓN PARA "DIBUJAR" EL CARRITO ---
     function renderizarCarrito() {
         const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
         carritoLista.innerHTML = '';
 
         if (carrito.length === 0) {
             carritoLista.innerHTML = '<div class="alert alert-info" role="alert">Tu carrito de compras está vacío.</div>';
-            actualizarTotales(0);
+            actualizarTotales(0); // Llama a la nueva función de totales
             return;
         }
 
@@ -40,15 +42,28 @@ document.addEventListener('DOMContentLoaded', () => {
             carritoLista.innerHTML += itemHTML;
             subtotal += producto.precio * producto.cantidad;
         });
-        actualizarTotales(subtotal);
+        actualizarTotales(subtotal); // Llama a la nueva función de totales
     }
 
+    // --- FUNCIÓN CON LÓGICA DE DESCUENTO ---
     function actualizarTotales(subtotal) {
-        subtotalDisplay.textContent = `$${subtotal.toLocaleString('es-CL')}`;
-        totalDisplay.textContent = `$${subtotal.toLocaleString('es-CL')}`;
+        const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+        let descuento = 0;
+
+        // Verificamos si hay un usuario logueado y si su correo tiene derecho a descuento
+        if (currentUser && (currentUser.correo.endsWith('@duoc.cl') || currentUser.correo.endsWith('@profesor.duoc.cl'))) {
+            descuento = subtotal * 0.20; // Calculamos el 20%
+        }
+
+        const total = subtotal - descuento;
+
+        // Actualizamos todos los campos en el resumen del pedido
+        if (subtotalDisplay) subtotalDisplay.textContent = `$${subtotal.toLocaleString('es-CL')}`;
+        if (descuentosDisplay) descuentosDisplay.textContent = `-$${descuento.toLocaleString('es-CL')}`;
+        if (totalDisplay) totalDisplay.textContent = `$${total.toLocaleString('es-CL')}`;
     }
 
-    // Listener de eventos actualizado para los nuevos botones
+    // --- MANEJADOR DE EVENTOS PARA BOTONES (+, -, Quitar) ---
     carritoLista.addEventListener('click', (e) => {
         const target = e.target;
         const productId = target.dataset.id;
@@ -56,16 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target.classList.contains('btn-quitar')) {
             quitarDelCarrito(productId);
         } else if (target.classList.contains('btn-increment')) {
-            actualizarCantidad(productId, 1); // Suma 1
+            actualizarCantidad(productId, 1);
         } else if (target.classList.contains('btn-decrement')) {
-            actualizarCantidad(productId, -1); // Resta 1
+            actualizarCantidad(productId, -1);
         }
     });
 
+    // --- FUNCIONES AUXILIARES PARA MODIFICAR EL CARRITO ---
     function quitarDelCarrito(productId) {
         let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
         carrito = carrito.filter(producto => producto.id !== productId);
         localStorage.setItem('carrito', JSON.stringify(carrito));
+        
         renderizarCarrito();
         actualizarContadorCarrito();
     }
@@ -76,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (producto) {
             producto.cantidad += cambio;
-            // Si la cantidad llega a 0 o menos, quitamos el producto
             if (producto.cantidad <= 0) {
                 quitarDelCarrito(productId);
             } else {
@@ -87,5 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- EJECUCIÓN INICIAL AL CARGAR LA PÁGINA ---
     renderizarCarrito();
 });

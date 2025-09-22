@@ -42,7 +42,8 @@ Personalización del navbar + animacion del titulo
     0 0 25px #bd0bf4, 
     0 0 30px #bd0bf4, 
     0 0 35px #bd0bf4; /* Sombra para el resplandor neón */
-  animation: neonBlink 2.9s infinite alternate; /* Animación de parpadeo */
+
+  /*animation: neonBlink 2.9s infinite alternate; /* Animación de parpadeo (Desactivada por ahora) */
 }
 
 
@@ -75,7 +76,7 @@ Botón de login en la navbar */
 
 
 .btn-login {
-  background-color: #bd0bf4;           /* azul visible desde el inicio */
+  background-color: #bd0bf4;           /* morado visible desde el inicio */
   border: 2px solid #bd0bf4;           /* mismo color del borde */
   color: #fff;                         /* texto blanco */
   border-radius: 50px;                   /* bordes redondeados tipo píldora */
@@ -89,7 +90,7 @@ Botón de login en la navbar */
 
 
 .btn-login:hover i {
-  color: #bd0bf4;                       /* morado neón solo para el ícono */
+  color: #bd0bf4;                       /* morado para el ícono al pasar el cursos por encima */
 }
 
 
@@ -112,15 +113,18 @@ FIN DEL BOTON DEL NAVBAR LOGIN
 
 
 
+
+
+
 /*====================================================
-  Efectos Hover para los enlaces del Navbar
+Efectos Hover para los enlaces del Navbar
 ====================================================*/
 
 /* Preparamos el contenedor del enlace para la animación */
 .navbar-nav .nav-link {
     position: relative; /* Necesario para posicionar la línea de abajo */
     transition: color 0.4s ease-out; /* Transición suave para el color del texto */
-    padding-bottom: 8px; /* Damos un poco de espacio para la línea */
+    padding-bottom: 8px; /* de espacio para la línea */
 }
 
 /* Creamos la línea inferior, inicialmente oculta */
@@ -131,7 +135,7 @@ FIN DEL BOTON DEL NAVBAR LOGIN
     left: 0;
     width: 100%;
     height: 3px; /* Grosor de la línea */
-    background-color: var(--primary-color, #bd0bf4); /* Usa tu color principal */
+    background-color: var(--primary-color, #bd0bf4); 
     
     /* Animación: la línea está escalada a 0 (invisible) */
     transform: scaleX(0);

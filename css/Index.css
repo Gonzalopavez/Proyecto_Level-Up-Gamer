@@ -3,7 +3,7 @@
 
 
 /*===========================================
-Fondo Oscuro y Texto Claro de la pagina
+Fondo Oscuro y Texto Claro de la pagina / esta caracteristica se aplica a todas las paginas
 ===========================================*/
 
 body {
@@ -44,7 +44,7 @@ Estilos para el Carrusel de Banner
 
 
 
-/* Contenedor del botón " Ver productos*/
+/* Contenedor del botón " Ver productos " */
 .carousel-caption-button {
   position: absolute;
   bottom: 20px; /* Distancia desde la parte inferior */
@@ -60,7 +60,7 @@ Estilos para el Carrusel de Banner
 
 #heroCarousel .btn-gamer {
 
-  opacity: 0.5; /* --- Ajuste de Opacidad --- */
+  opacity: 1; /* --- Ajuste de Opacidad --- */
 
   /* --- Ajuste de Tamaño y fuente cambiando el padding--- */
   padding: 8px 16px; 

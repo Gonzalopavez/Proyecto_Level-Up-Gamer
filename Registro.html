@@ -7,24 +7,27 @@
 
 
   <!--TITULO DE LA PAGINA-->
-  <title>Registro | LevelUp Gamer</title>
+  <title> Registro | LevelUp Gamer</title>
 
 
   <!-- Plantilla Bootstrap del Registro -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 
 
   <!-- Se llama el estilo del registro desde style.css -->
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/Index.css">
   <link rel="stylesheet" href="css/registro.css">
+  
 
   <!-- Google Fonts para el titulo  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 </head>
 
@@ -32,17 +35,108 @@
 
 
 
-<!-- Ajusta al centro el formulario -->
-<body class="d-flex justify-content-center py-5">
-  <div class="container col-md-6"> <!-- hace que el formulario se vea proporcionado  -->
+
+<body class="pagina-registro d-flex flex-column vh-100">  <!-- d-flex flex-column vh-100 para que el footer quede abajo -->
+
+  <header>  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid"> 
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.png" class="logogamer d-inline-block align-top" alt="Logo LevelUp Gamer">
+                <span class="neon-text ms-2">LEVEL-UP GAMER</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="index.html" aria-label="Home">
+                          <i class="bi bi-house-door-fill "></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active" href="registro.html">Registro</a>
+                    </li>
+
+                </ul>
+
+
+
+
+    
+
+
+
+
+                
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" id="cart-link" href="Carrito.html">
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="bi bi-instagram fs-6"></i>
+                        </a>
+
+                    
+                    
+                    </li>
+                    <li id="login-button" class="nav-item ms-2">
+                        <a class="btn btn-login"id="btn-iniciar-sesion" data-bs-toggle="offcanvas" href="#offcanvasLogin" role="button" aria-controls="offcanvasLogin">
+                            <i class="bi bi-person"></i> Iniciar sesión
+                        </a>
+                    </li>
+
+
+                    <li id="user-menu" class="nav-item dropdown d-none ms-2">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle fs-5"></i>
+                      <span id="username-display"></span> </a>
+                      <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                    <li><a id="logout-link" class="dropdown-item" href="#">Cerrar Sesión</a>
+                    </li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+  <main class="d-flex justify-content-center align-items-center flex-grow-1">
+
+
+
+    <div class="container col-md-6 mt-5 mb-5 "> <!-- hace que el formulario se vea proporcionado  -->
     <h1 class="text-center mb-4 titulo-animado"> 
-      <i class="bi bi-person-plus me-2"></i> CREAR CUENTA 
+      <i class="bi bi-person-plus me-2"></i> CREAR CUENTA
     </h1>
+  
+
+  <!-- id para luego trabajr con JS -->
+  <form id="registroForm" novalidate class="p-4 rounded bg-dark form-neon">
 
 
 
-    <!-- id para luego trabajr con JS -->
-    <form id="registroForm" novalidate class="p-4 rounded bg-dark form-neon">
+
+
 
 
 
@@ -204,6 +298,11 @@
       
     </form>
   </div>
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 LEVEL-UP GAMER. Todos los derechos reservados.</p>
+    </footer>
 
 
 
@@ -213,12 +312,16 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Archivo JS propio -->
-  <script src="js/registro.js"></script>
-
   <!-- script de sweetalert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Archivo JS propio -->
+  <script src="js/sesion.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/registro.js"></script>
+
+
+
 
 
 </body>
