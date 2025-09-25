@@ -71,3 +71,13 @@
     min-width: 25px;
     text-align: center;
 }
+
+.btn-quitar{
+    background-color: rgb(255, 68, 68);
+    color:#fff
+}
+
+.btn-outline-danger{
+    background-color: rgb(255, 68, 68);
+    color: #fff
+}

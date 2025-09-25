@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Capturamos los elementos del DOM que necesitamos
+    // Capturamos todos los elementos del DOM que necesitamos
     const carritoLista = document.getElementById('carrito-lista');
     const subtotalDisplay = document.getElementById('carrito-subtotal');
     const descuentosDisplay = document.getElementById('carrito-descuentos');
     const totalDisplay = document.getElementById('carrito-total');
+    const btnVaciarCarrito = document.getElementById('btn-vaciar-carrito');
+    const vaciarCarritoContainer = document.getElementById('vaciar-carrito-container');
 
     // --- FUNCIÓN PARA "DIBUJAR" EL CARRITO ---
     function renderizarCarrito() {
@@ -12,9 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (carrito.length === 0) {
             carritoLista.innerHTML = '<div class="alert alert-info" role="alert">Tu carrito de compras está vacío.</div>';
-            actualizarTotales(0); // Llama a la nueva función de totales
+            if (vaciarCarritoContainer) vaciarCarritoContainer.classList.add('d-none'); // Oculta el botón si el carrito está vacío
+            actualizarTotales(0);
             return;
         }
+        
+        if (vaciarCarritoContainer) vaciarCarritoContainer.classList.remove('d-none');
 
         let subtotal = 0;
         carrito.forEach(producto => {
@@ -42,12 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
             carritoLista.innerHTML += itemHTML;
             subtotal += producto.precio * producto.cantidad;
         });
-        actualizarTotales(subtotal); // Llama a la nueva función de totales
+        actualizarTotales(subtotal);
     }
 
     // --- FUNCIÓN CON LÓGICA DE DESCUENTO ---
     function actualizarTotales(subtotal) {
-        const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+        // 1. Buscamos primero en sessionStorage (sesión normal).
+        let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+
+        // 2. Si no hay sesión normal, buscamos en localStorage (sesión recordada).
+        if (!currentUser) {
+            currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        }
+        
         let descuento = 0;
 
         // Verificamos si hay un usuario logueado y si su correo tiene derecho a descuento
@@ -64,18 +76,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- MANEJADOR DE EVENTOS PARA BOTONES (+, -, Quitar) ---
-    carritoLista.addEventListener('click', (e) => {
-        const target = e.target;
-        const productId = target.dataset.id;
+    if(carritoLista) {
+        carritoLista.addEventListener('click', (e) => {
+            const target = e.target;
+            const productId = target.dataset.id;
 
-        if (target.classList.contains('btn-quitar')) {
-            quitarDelCarrito(productId);
-        } else if (target.classList.contains('btn-increment')) {
-            actualizarCantidad(productId, 1);
-        } else if (target.classList.contains('btn-decrement')) {
-            actualizarCantidad(productId, -1);
-        }
-    });
+            if (target.classList.contains('btn-quitar')) {
+                quitarDelCarrito(productId);
+            } else if (target.classList.contains('btn-increment')) {
+                actualizarCantidad(productId, 1);
+            } else if (target.classList.contains('btn-decrement')) {
+                actualizarCantidad(productId, -1);
+            }
+        });
+    }
+
+    // --- LISTENER PARA EL BOTÓN "VACIAR CARRITO" ---
+    if (btnVaciarCarrito) {
+        btnVaciarCarrito.addEventListener('click', () => {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: "Esta acción eliminará todos los productos de tu carrito.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#bd0bf4',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Sí, vaciar carrito',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    localStorage.removeItem('carrito');
+                    renderizarCarrito();
+                    actualizarContadorCarrito();
+
+                    Swal.fire(
+                        '¡Carrito vacío!',
+                        'Todos los productos han sido eliminados.',
+                        'success',
+                    )
+                }
+            })
+        });
+    }
 
     // --- FUNCIONES AUXILIARES PARA MODIFICAR EL CARRITO ---
     function quitarDelCarrito(productId) {

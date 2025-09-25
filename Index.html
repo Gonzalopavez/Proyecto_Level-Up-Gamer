@@ -131,7 +131,7 @@
     <div class="carousel-item">
       <img src="img/monitor.jpg" class="d-block w-100 carousel-image" alt="Setup con monitor curvo">
       <div class="carousel-caption-button">
-        <a href="#productos-container" class="btn btn-gamer btn-lg">Ver productos</a>
+        <a href="#seccion-productos" class="btn btn-gamer btn-lg">Ver productos</a>
       </div>
     </div>
 
@@ -159,12 +159,11 @@
   </section>
 
 
-  <div class="container my-5">
-      <h2 class="text-center mb-4">Nuestros Productos</h2>
-  <div id="productos-container" class="row">
 
-    </div>
-    </div>
+
+  <div id="seccion-productos" class="container my-5"> <h2 class="text-center mb-4">Productos Destacados</h2>
+    <div id="productos-container" class="row">...</div>
+</div>
 
 </main>
 
@@ -231,6 +230,35 @@
 
 
 
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-product-title">Nombre del Producto</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img id="modal-product-image" src="" class="img-fluid rounded" alt="Imagen del producto">
+                    </div>
+                    <div class="col-md-7">
+                        <p id="modal-product-description">Aquí va la descripción detallada del producto.</p>
+                        <h4 id="modal-product-price" class="text-end fw-bold">$0</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" id="modal-add-to-cart-btn" class="btn btn-gamer btn-agregar">
+                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
 
@@ -256,15 +284,10 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
   <script src="js/sesion.js"></script>    
   <script src="js/productos.js"></script>  
   <script src="js/tienda.js"></script>    
   <script src="js/login.js"></script>    
-
-
-
-
 
 
 

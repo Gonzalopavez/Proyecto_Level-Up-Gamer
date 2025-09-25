@@ -78,6 +78,14 @@ Estilos para el Carrusel de Banner
 
 
 
+/* Ajuste para el anclaje del scroll con navbar fijo */
+#seccion-productos {
+  scroll-margin-top: 70px;
+  margin-top: 6rem !important;
+}
+
+
+
 
 
 /*===========================================
@@ -110,6 +118,41 @@ Estilos para el Carrusel de Banner
 .btn-gamer:hover {
     background-color: #9a00c9; /* Color de fondo más oscuro al pasar el cursor */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================================
+  Personalización del Fondo del Modal
+===========================================*/
+
+.modal-backdrop {
+
+  opacity: 0.9 !important;
+
+}
+
+/*===========================================
+  Personalización de la Ventana Modal
+===========================================*/
+
+.modal-content {
+    border: 2px solid #bd0bf4; 
+    box-shadow: 0 0 25px rgba(189, 11, 244, 0.6); 
+}
+
 
 
 

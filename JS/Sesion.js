@@ -1,33 +1,15 @@
 
 
-// --- NUEVA FUNCIÓN ---
-// Esta función puede estar aquí afuera para mantener el código ordenado.
-// Su trabajo es leer el carrito y actualizar el número en el navbar.
+
 function actualizarContadorCarrito() {
-    // Obtenemos el carrito de localStorage, si no existe, es un arreglo vacío.
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    
-    // Usamos reduce para sumar la propiedad 'cantidad' de cada producto en el carrito.
     const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
     
-    // Buscamos el enlace del carrito en el navbar.
     const cartLink = document.getElementById('cart-link');
-    
-    // Si el enlace existe, actualizamos su contenido.
     if (cartLink) {
         cartLink.innerHTML = `<i class="bi bi-cart"></i> Carrito (${totalItems})`;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 // Este script se ejecuta cuando el contenido de la página se ha cargado.
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,49 +19,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const usernameDisplay = document.getElementById('username-display');
     const logoutLink = document.getElementById('logout-link');
 
-    // Revisamos si hay un usuario guardado en sessionStorage.
-    const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+    // --- LÓGICA DE SESIÓN (CON "RECORDARME") ---
+    // 1. Buscamos primero en sessionStorage (sesión normal).
+    let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
 
+    // 2. Si no hay sesión normal, buscamos en localStorage (sesión recordada).
+    if (!currentUser) {
+        currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    }
+
+    // --- LÓGICA PARA MOSTRAR/OCULTAR BOTONES ---
     if (currentUser) {
-        // Si hay un usuario logueado:
-        // 1. Ocultamos el botón de "Iniciar Sesión".
+        // Si encontramos un usuario en cualquiera de los dos, lo tratamos como logueado.
         if(loginButton) loginButton.classList.add('d-none');
-        
-        // 2. Mostramos el menú de usuario.
         if(userMenu) userMenu.classList.remove('d-none');
-        
-        // 3. Mostramos el nombre del usuario.
         if(usernameDisplay) usernameDisplay.textContent = currentUser.nombre;
-
     } else {
-        // Si NO hay un usuario logueado:
-        // 1. Mostramos el botón de "Iniciar Sesión".
+        // Si no hay usuario en ningún lado, no está logueado.
         if(loginButton) loginButton.classList.remove('d-none');
-
-        // 2. Ocultamos el menú de usuario.
         if(userMenu) userMenu.classList.add('d-none');
     }
 
-    // Funcionalidad de Cerrar Sesión
+    // --- FUNCIONALIDAD DE CERRAR SESIÓN ---
     if(logoutLink) {
         logoutLink.addEventListener('click', (e) => {
-            e.preventDefault(); // Evitamos que el enlace navegue.
+            e.preventDefault();
             
-            // Borramos al usuario de sessionStorage.
+            // Borramos la sesión de AMBOS almacenamientos.
             sessionStorage.removeItem('currentUser');
-
-            // Al cerrar sesión, también limpiamos el carrito de compras.
-            localStorage.removeItem('carrito');
+            localStorage.removeItem('currentUser');
             
-            // Recargamos la página para que vuelva al estado de "no logueado".
+            // También limpiamos el carrito al cerrar sesión.
+            localStorage.removeItem('carrito');
+
             window.location.reload();
         });
     }
-    
- // --- LLAMADA A LA NUEVA FUNCIÓN ---
-    // Al final del script, llamamos a la función para que el contador
-    // del carrito se muestre correctamente al cargar CUALQUIER página.
+
+    // Al final, llamamos a la función para que el contador del carrito se actualice.
     actualizarContadorCarrito();
-
-
 });

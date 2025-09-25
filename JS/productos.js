@@ -6,7 +6,17 @@ const listaProductos = [
     id: "prod-01",
     nombre: "Tarjeta Gráfica RTX 4090",
     precio: 1899990,
-    imagen: "img/rtx.jpg" 
+    imagen: "img/rtx.jpg",
+    descripcion:`Experimenta un rendimiento sin precedentes en juegos y creación de contenido con la GPU más potente del mercado.
+        <br><br> <strong>Características Principales:</strong>
+        <ul>
+            <li>Arquitectura de última generación NVIDIA Ada Lovelace.</li>
+            <li>24 GB de memoria GDDR6X.</li>
+            <li>Ray Tracing de 3ª generación y DLSS 3.</li>
+            <li>Ideal para gaming en 4K y realidad virtual.</li>
+        </ul>
+
+    `
   },
   {
     id: "prod-02",

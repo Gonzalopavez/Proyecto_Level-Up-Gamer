@@ -22,7 +22,21 @@ document.addEventListener('DOMContentLoaded', () => {
         );
 
         if (usuarioEncontrado) {
-            sessionStorage.setItem('currentUser', JSON.stringify(usuarioEncontrado));
+
+    // --- SI EL LOGIN ES EXITOSO ---
+    const rememberMeCheckbox = document.getElementById('rememberMe');
+
+    // Si la casilla está marcada, guardamos en localStorage.
+    if (rememberMeCheckbox.checked) {
+        localStorage.setItem('currentUser', JSON.stringify(usuarioEncontrado));
+    } else {
+        // Si no está marcada, se guarda en sessionStorage .
+        sessionStorage.setItem('currentUser', JSON.stringify(usuarioEncontrado));
+    }
+
+
+
+
 
             Swal.fire({
               icon: "success",

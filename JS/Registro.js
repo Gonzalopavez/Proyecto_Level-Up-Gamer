@@ -1,7 +1,3 @@
-// ========================================================================================
-// ARCHIVO DE VALIDACIONES PARA REGISTRO.HTML
-// legible, mantenible y eficiente.
-// ========================================================================================
 
 
 
@@ -175,7 +171,7 @@ const validarFechaNacimiento = () => {
     // Si el mes actual es menor, o es el mismo mes pero el día actual es menor, aún no cumple años.
     const edadFinal = (m < 0 || (m === 0 && hoy.getDate() < fecha.getDate())) ? edad - 1 : edad;
     
-    const esValido = edadFinal >= 18;
+    const esValido = edadFinal >= 18 && edadFinal <= 115;
     mostrarEstadoValidacion(fechaNacimiento, esValido);
     return esValido;
 };
@@ -348,7 +344,7 @@ form.addEventListener("submit", (e) => {
                 Swal.fire({
                     icon: 'success',
                     title: '¡Registro exitoso!',
-                    text: 'Tu cuenta ha sido creada. Serás redirigido.'
+                    text: 'Tu cuenta ha sido creada.'
                 }).then(() => {
                     //4. Después de que el usuario presione "OK", lo redirigimos al home.
                     window.location.href = 'index.html';
