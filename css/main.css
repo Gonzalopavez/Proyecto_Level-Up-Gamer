@@ -8,10 +8,11 @@ Fondo Oscuro y Texto Claro de la pagina / esta caracteristica se aplica a todas 
 
 body {
   background-color: black;
-  color: white; /* texto claro sobre fondo oscuro */
+  color: white; 
   padding-top: 70px; /*padding superior al cuerpo de la página para evitar que el contenido quede oculto detrás del navbar */
   
 }
+
 
 
 
@@ -70,7 +71,6 @@ Estilos para el Carrusel de Banner
   transition: opacity 0.3s ease;
 }
 
-/* Efecto al pasar el cursor */
 #heroCarousel .btn-gamer:hover {
   opacity: 1;
 }
@@ -86,13 +86,21 @@ Estilos para el Carrusel de Banner
 
 
 
+/*===========================================
+FIN PERSONALIZACION CARRUSEL
+===========================================*/
+
+
+
+
+
 
 
 /*===========================================
-  Estilos Personalizados para Tarjetas de Producto
+Estilos Personalizados para Tarjetas de Producto
 ===========================================*/
 
-/*Estilo para el contorno de la tarjeta */
+/*contorno de la tarjeta */
 .card {
     border: 1px solid #bd0bf4; 
     box-shadow: 0 0 10px rgba(189, 11, 244, 0.4); /* Sombra brillante sutil */
@@ -106,20 +114,33 @@ Estilos para el Carrusel de Banner
 }
 
 
-/* 2. Estilo para el botón de "Agregar al carrito" */
+/*Estilo para el botón de "Agregar al carrito" */
 
 .btn-gamer {
-    background-color: #bd0bf4; /* Color de fondo morado (puedes cambiarlo) */
+    background-color: #bd0bf4; 
     border: none;
     font-weight: bold;
     color: #ffffff;
 }
 
 .btn-gamer:hover {
-    background-color: #9a00c9; /* Color de fondo más oscuro al pasar el cursor */
+    background-color: #9a00c9; 
 }
 
 
+/*Estilo para alinear las imágenes de las tarjetas*/
+
+
+.card-img-top {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 200px; /* altura fija */
+    object-fit: cover; /* imagen rellena el espacio sin deformarse */
+}
+
+
+/*===========================================
+FIN PERSONALIZACION TARJETAS DE PRODUCTO
+===========================================*/
 
 
 
@@ -135,7 +156,7 @@ Estilos para el Carrusel de Banner
 
 
 /*===========================================
-  Personalización del Fondo del Modal
+Personalización del Fondo del Modal
 ===========================================*/
 
 .modal-backdrop {
@@ -145,7 +166,7 @@ Estilos para el Carrusel de Banner
 }
 
 /*===========================================
-  Personalización de la Ventana Modal
+Personalización de la Ventana Modal
 ===========================================*/
 
 .modal-content {
@@ -156,6 +177,9 @@ Estilos para el Carrusel de Banner
 
 
 
+/*===========================================
+FIN PERSONALIZACION DEL MODAL
+===========================================*/
 
 
 
@@ -239,7 +263,7 @@ FIN DE LA PERSONALIZACION DEL NAVBAR
 
 
 /*====================================================
-Botón de login en la navbar */
+Botón de login en la navbar 
 /*====================================================*/
 
 
@@ -418,8 +442,8 @@ Estilo personalizado para el offcanvas de login
 }
 
 .btn-primary-Entrar:hover {
-  background-color: #9a0cc5; /* color cuando pasas el mouse */
-  color: white; /* aseguras que el texto siga en blanco */
+  background-color: #9a0cc5; 
+  color: white; 
 }
 
 
@@ -432,3 +456,38 @@ FIN DE LA PERSONALIZACION DEL OFFCANVAS DE LOGIN
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*===========================================
+  Estilos para el Footer
+===========================================*/
+
+.footer-link {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #bd0bf4; 
+    padding-left: 5px; /* Pequeño desplazamiento a la derecha */
+}
+
+/* Efecto para los íconos de redes sociales */
+.btn-floating {
+    transition: all 0.3s ease;
+}
+
+.btn-floating:hover {
+    transform: translateY(-3px); /* Se elevan un poco */
+    color: #bd0bf4 !important; 
+}

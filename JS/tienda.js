@@ -59,7 +59,7 @@ function renderizarProductos(productos) {
   productosContainer.innerHTML = '';
   productos.forEach(producto => {
     const productoCard = document.createElement('div');
-    productoCard.className = 'col-lg-3 col-md-4 col-sm-6 mb-4';
+    productoCard.className = 'col-lg-3 col-md-4 col-sm-6 mb-5';
     productoCard.innerHTML = `
       <div class="card h-100 bg-dark text-white">
         <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
