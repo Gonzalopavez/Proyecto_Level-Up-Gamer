@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
         carritoLista.innerHTML = '';
 
-        if (carrito.length === 0) {
+        if(carrito.length === 0) {
             carritoLista.innerHTML = '<div class="alert alert-info" role="alert">Tu carrito de compras está vacío.</div>';
             if (vaciarCarritoContainer) vaciarCarritoContainer.classList.add('d-none'); // Oculta el botón si el carrito está vacío
             actualizarTotales(0);
