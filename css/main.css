@@ -1,16 +1,13 @@
-
-
-
-
 /*===========================================
 Fondo Oscuro y Texto Claro de la pagina / esta caracteristica se aplica a todas las paginas
 ===========================================*/
 
 body {
   background-color: black;
-  color: white; 
-  padding-top: 70px; /*padding superior al cuerpo de la página para evitar que el contenido quede oculto detrás del navbar */
-  
+  color: white;
+  padding-top: 70px;
+  /*padding superior al cuerpo de la página para evitar que el contenido quede oculto detrás del navbar */
+
 }
 
 
@@ -25,14 +22,17 @@ Estilos para el Carrusel de Banner
 ===========================================*/
 
 #heroCarousel {
-  position: relative; /* Necesario para posicionar el botón */
+  position: relative;
+  /* Necesario para posicionar el botón */
 }
 
 
 
 .carousel-item {
-  height: 90vh; /* Altura del carrusel */
-  min-height: 400px; /* Altura mínima para pantallas pequeñas */
+  height: 90vh;
+  /* Altura del carrusel */
+  min-height: 400px;
+  /* Altura mínima para pantallas pequeñas */
 }
 
 
@@ -40,7 +40,8 @@ Estilos para el Carrusel de Banner
 .carousel-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* La imagen cubre todo el espacio sin deformarse */
+  object-fit: cover;
+  /* La imagen cubre todo el espacio sin deformarse */
 }
 
 
@@ -48,10 +49,13 @@ Estilos para el Carrusel de Banner
 /* Contenedor del botón " Ver productos " */
 .carousel-caption-button {
   position: absolute;
-  bottom: 20px; /* Distancia desde la parte inferior */
+  bottom: 20px;
+  /* Distancia desde la parte inferior */
   left: 50%;
-  transform: translateX(-50%); /*centrar perfectamente el botón de " ver productos */
-  padding: 10px; /* esto hace que el boton suba de posicion */
+  transform: translateX(-50%);
+  /*centrar perfectamente el botón de " ver productos */
+  padding: 10px;
+  /* esto hace que el boton suba de posicion */
 }
 
 
@@ -61,11 +65,12 @@ Estilos para el Carrusel de Banner
 
 #heroCarousel .btn-gamer {
 
-  opacity: 1; /* --- Ajuste de Opacidad --- */
+  opacity: 1;
+  /* --- Ajuste de Opacidad --- */
 
   /* --- Ajuste de Tamaño y fuente cambiando el padding--- */
-  padding: 8px 16px; 
-  font-size: 1rem; 
+  padding: 8px 16px;
+  font-size: 1rem;
 
   /* Esto hace que el botón se vuelva menos transparente al pasar el cursor. */
   transition: opacity 0.3s ease;
@@ -80,9 +85,19 @@ Estilos para el Carrusel de Banner
 
 /* Ajuste para el anclaje del scroll con navbar fijo */
 #seccion-productos {
-  scroll-margin-top: 70px;
-  margin-top: 6rem !important;
+  scroll-margin-top: 90px;
+  margin-top: 10rem !important;
 }
+
+
+
+/* Aumenta el espacio SOBRE la sección "Por Qué Elegirnos" */
+#why-us-section {
+  margin-top: 10rem !important;
+  margin-bottom: 10rem;
+}
+
+
 
 
 
@@ -102,29 +117,33 @@ Estilos Personalizados para Tarjetas de Producto
 
 /*contorno de la tarjeta */
 .card {
-    border: 1px solid #bd0bf4; 
-    box-shadow: 0 0 10px rgba(189, 11, 244, 0.4); /* Sombra brillante sutil */
-    transition: all 0.3s ease; /* Transición suave para el efecto hover */
+  border: 1px solid #bd0bf4;
+  box-shadow: 0 0 10px rgba(189, 11, 244, 0.4);
+  /* Sombra brillante sutil */
+  transition: all 0.3s ease;
+  /* Transición suave para el efecto hover */
 }
 
 /* Efecto al pasar el cursor sobre la tarjeta */
 .card:hover {
-    transform: translateY(-5px); /* La tarjeta se eleva un poco */
-    box-shadow: 0 0 20px rgba(189, 11, 244, 0.7); /* La sombra se hace más intensa */
+  transform: translateY(-5px);
+  /* La tarjeta se eleva un poco */
+  box-shadow: 0 0 20px rgba(189, 11, 244, 0.7);
+  /* La sombra se hace más intensa */
 }
 
 
 /*Estilo para el botón de "Agregar al carrito" */
 
 .btn-gamer {
-    background-color: #bd0bf4; 
-    border: none;
-    font-weight: bold;
-    color: #ffffff;
+  background-color: #bd0bf4;
+  border: none;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .btn-gamer:hover {
-    background-color: #9a00c9; 
+  background-color: #9a00c9;
 }
 
 
@@ -132,9 +151,12 @@ Estilos Personalizados para Tarjetas de Producto
 
 
 .card-img-top {
-    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
-    height: 200px; /* altura fija */
-    object-fit: cover; /* imagen rellena el espacio sin deformarse */
+  width: 100%;
+  /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 200px;
+  /* altura fija */
+  object-fit: cover;
+  /* imagen rellena el espacio sin deformarse */
 }
 
 
@@ -170,8 +192,8 @@ Personalización de la Ventana Modal
 ===========================================*/
 
 .modal-content {
-    border: 2px solid #bd0bf4; 
-    box-shadow: 0 0 25px rgba(189, 11, 244, 0.6); 
+  border: 2px solid #bd0bf4;
+  box-shadow: 0 0 25px rgba(189, 11, 244, 0.6);
 }
 
 
@@ -202,12 +224,13 @@ Personalización del navbar + animacion del titulo
 /* Aseguramos que el navbar use flexbox y sus hijos estén alineados verticalmente */
 .navbar {
   display: flex;
-  align-items: center; /* Alinea todos los elementos verticalmente en el centro */
+  align-items: center;
+  /* Alinea todos los elementos verticalmente en el centro */
 }
 
 .logogamer {
-  width: 55px; 
-  height: 45px; 
+  width: 55px;
+  height: 45px;
   vertical-align: middle;
 }
 
@@ -217,24 +240,26 @@ Personalización del navbar + animacion del titulo
 
 .navbar-brand {
   font-family: 'Audiowide', sans-serif;
-  font-size: 1rem; 
-  color: #fff; 
-  text-transform: uppercase; 
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 
 
 /* Estilo Neón solo en el texto del título */
 .neon-text {
-  color: #fff; /* Color del texto */
-  text-shadow: 
-    0 0 5px #bd0bf4, 
-    0 0 10px #bd0bf4, 
-    0 0 15px #bd0bf4, 
-    0 0 20px #bd0bf4, 
-    0 0 25px #bd0bf4, 
-    0 0 30px #bd0bf4, 
-    0 0 35px #bd0bf4; /* Sombra para el resplandor neón */
+  color: #fff;
+  /* Color del texto */
+  text-shadow:
+    0 0 5px #bd0bf4,
+    0 0 10px #bd0bf4,
+    0 0 15px #bd0bf4,
+    0 0 20px #bd0bf4,
+    0 0 25px #bd0bf4,
+    0 0 30px #bd0bf4,
+    0 0 35px #bd0bf4;
+  /* Sombra para el resplandor neón */
 
   /*animation: neonBlink 2.9s infinite alternate; /* Animación de parpadeo (Desactivada por ahora) */
 }
@@ -269,30 +294,40 @@ Botón de login en la navbar
 
 
 .btn-login {
-  background-color: #bd0bf4;           /* morado visible desde el inicio */
-  border: 2px solid #bd0bf4;           /* mismo color del borde */
-  color: #fff;                         /* texto blanco */
-  border-radius: 50px;                   /* bordes redondeados tipo píldora */
+  background-color: #bd0bf4;
+  /* morado visible desde el inicio */
+  border: 2px solid #bd0bf4;
+  /* mismo color del borde */
+  color: #fff;
+  /* texto blanco */
+  border-radius: 50px;
+  /* bordes redondeados tipo píldora */
   padding: 6px 16px;
   font-weight: bold;
   transition: all 0.3s ease;
-  margin-right: 20px; /* ajusta el espacio */
-  margin-left: 20px; /* ajusta el espacio */
+  margin-right: 20px;
+  /* ajusta el espacio */
+  margin-left: 20px;
+  /* ajusta el espacio */
 }
 
 
 
 .btn-login:hover i {
-  color: #bd0bf4;                       /* morado para el ícono al pasar el cursos por encima */
+  color: #bd0bf4;
+  /* morado para el ícono al pasar el cursos por encima */
 }
 
 
 .btn-login:hover {
-  background-color: #fff;              /* fondo blanco al pasar el mouse */
-  color: #bd0bf4;                      /* texto morado */
+  background-color: #fff;
+  /* fondo blanco al pasar el mouse */
+  color: #bd0bf4;
+  /* texto morado */
   box-shadow: 0 0 10px #bd0bf4,
-              0 0 20px #bd0bf4,
-              0 0 40px #bd0bf4;        /* brillo estilo neón */
+    0 0 20px #bd0bf4,
+    0 0 40px #bd0bf4;
+  /* brillo estilo neón */
 }
 
 
@@ -315,47 +350,57 @@ Efectos Hover para los enlaces del Navbar
 
 /* Preparamos el contenedor del enlace para la animación */
 .navbar-nav .nav-link {
-    position: relative; /* Necesario para posicionar la línea de abajo */
-    transition: color 0.4s ease-out; /* Transición suave para el color del texto */
-    padding-bottom: 8px; /* de espacio para la línea */
+  position: relative;
+  /* Necesario para posicionar la línea de abajo */
+  transition: color 0.4s ease-out;
+  /* Transición suave para el color del texto */
+  padding-bottom: 8px;
+  /* de espacio para la línea */
 }
 
 /* Creamos la línea inferior, inicialmente oculta */
 .navbar-nav .nav-link::after {
-    content: ''; /* Pseudo-elemento necesita esto para mostrarse */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px; /* Grosor de la línea */
-    background-color: var(--primary-color, #bd0bf4); 
-    
-    /* Animación: la línea está escalada a 0 (invisible) */
-    transform: scaleX(0);
-    transform-origin: bottom right; /* La animación empezará desde la derecha */
-    transition: transform 0.4s ease-out; /* Transición suave para la animación de la línea */
+  content: '';
+  /* Pseudo-elemento necesita esto para mostrarse */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  /* Grosor de la línea */
+  background-color: var(--primary-color, #bd0bf4);
+
+  /* Animación: la línea está escalada a 0 (invisible) */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  /* La animación empezará desde la derecha */
+  transition: transform 0.4s ease-out;
+  /* Transición suave para la animación de la línea */
 }
 
 /* Cuando pasamos el cursor sobre el enlace... */
 .navbar-nav .nav-link:hover {
-    color: var(--primary-color, #bd0bf4) !important; /* Cambia el color del texto */
+  color: var(--primary-color, #bd0bf4) !important;
+  /* Cambia el color del texto */
 }
 
 /* ... Y TAMBIÉN cambiamos el color del ícono que está adentro */
 .navbar-nav .nav-link:hover i {
-    color: var(--primary-color, #bd0bf4) !important;
+  color: var(--primary-color, #bd0bf4) !important;
 }
 
 /* ...también mostramos la línea animada */
 .navbar-nav .nav-link:hover::after {
-    transform: scaleX(1); /* La línea se escala a su tamaño completo */
-    transform-origin: bottom left; /* La animación ahora va de izquierda a derecha */
+  transform: scaleX(1);
+  /* La línea se escala a su tamaño completo */
+  transform-origin: bottom left;
+  /* La animación ahora va de izquierda a derecha */
 }
 
 /* Para el enlace activo (la página actual), dejamos la línea visible */
 .navbar-nav .nav-link.active::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 
@@ -392,10 +437,14 @@ Estilo personalizado para el offcanvas de login
 /*====================================================*/
 
 .offcanvas-login-custom {
-  background-color: #111111; /* fondo oscuro personalizado */
-  border-left: 3px solid #ffffff !important; /* borde izquierdo blanco */
-  color: white; /* texto blanco */
-  box-shadow: 0 0 20px 5px #bd0bf4; /* sombra brillante morada */
+  background-color: #111111;
+  /* fondo oscuro personalizado */
+  border-left: 3px solid #ffffff !important;
+  /* borde izquierdo blanco */
+  color: white;
+  /* texto blanco */
+  box-shadow: 0 0 20px 5px #bd0bf4;
+  /* sombra brillante morada */
 
   /* Esquinas redondeadas en el lado izquierdo */
   border-top-left-radius: 30px;
@@ -405,9 +454,11 @@ Estilo personalizado para el offcanvas de login
 }
 
 .btn-close {
-  filter: invert(1); /* invierte los colores para que el botón sea visible en fondo oscuro */
-  opacity: 1; /* un poco transparente */
-  
+  filter: invert(1);
+  /* invierte los colores para que el botón sea visible en fondo oscuro */
+  opacity: 1;
+  /* un poco transparente */
+
 }
 
 .bi {
@@ -418,6 +469,7 @@ Estilo personalizado para el offcanvas de login
 .titulo-canvas {
   color: white;
 }
+
 .form-label-canvas-correo {
   color: white;
 }
@@ -442,8 +494,8 @@ Estilo personalizado para el offcanvas de login
 }
 
 .btn-primary-Entrar:hover {
-  background-color: #9a0cc5; 
-  color: white; 
+  background-color: #9a0cc5;
+  color: white;
 }
 
 
@@ -459,7 +511,77 @@ FIN DE LA PERSONALIZACION DEL OFFCANVAS DE LOGIN
 
 
 
+/*===========================================
+Estilos para la Sección "Por Qué Elegirnos"
+===========================================*/
 
+#why-us-section {
+  position: relative;
+  /* Opcional: Si queremos una imagen de fondo sutil */
+  /* background: url('../img/fondo-abstracto.jpg') no-repeat center center/cover; */
+}
+
+
+/* capa oscura semitransparente sobre el fondo */
+#why-us-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+
+/* El estilo de la tarjeta de cristal */
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  /* Fondo semitransparente */
+  backdrop-filter: blur(10px);
+  /*efecto esmerilado*/
+  -webkit-backdrop-filter: blur(10px);
+  /* Para compatibilidad con Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #bd0bf4;
+  box-shadow: 0 0 25px rgba(189, 11, 244, 0.6);
+}
+
+/* Estilo para el ícono */
+.feature-icon i {
+  font-size: 3rem;
+  /* Íconos más grandes */
+  color: #bd0bf4;
+  /* Íconos con tu color de marca */
+  text-shadow: 0 0 15px #bd0bf4;
+}
+
+
+
+/*===========================================
+FIN PERSONALIZACIONDE POR QUE ELEGIRNOS
+===========================================*/
+
+
+
+
+
+/*===========================================
+  Ajustes de Espaciado Adicional para el Index
+===========================================*/
 
 
 
@@ -468,26 +590,28 @@ FIN DE LA PERSONALIZACION DEL OFFCANVAS DE LOGIN
 
 
 /*===========================================
-  Estilos para el Footer
+Estilos para el Footer
 ===========================================*/
 
 .footer-link {
-    color: #ccc;
-    text-decoration: none;
-    transition: all 0.3s ease;
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .footer-link:hover {
-    color: #bd0bf4; 
-    padding-left: 5px; /* Pequeño desplazamiento a la derecha */
+  color: #bd0bf4;
+  padding-left: 5px;
+  /* Pequeño desplazamiento a la derecha */
 }
 
 /* Efecto para los íconos de redes sociales */
 .btn-floating {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-floating:hover {
-    transform: translateY(-3px); /* Se elevan un poco */
-    color: #bd0bf4 !important; 
+  transform: translateY(-3px);
+  /* Se elevan un poco */
+  color: #bd0bf4 !important;
 }
