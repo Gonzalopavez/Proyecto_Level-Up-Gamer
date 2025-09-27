@@ -2,7 +2,7 @@
 Fondo Oscuro y Texto Claro de la pagina / esta caracteristica se aplica a todas las paginas
 ===========================================*/
 
-body {
+body:not(.admin-page) {
   background-color: black;
   color: white;
   padding-top: 70px;
@@ -11,6 +11,43 @@ body {
 }
 
 
+
+/*===========================================
+Estilos Personalizados para el Filtro de Categorías
+===========================================*/
+
+/* Estilo para el texto "Filtrar por:" */
+.input-group-text {
+  background-color: #bd0bf4;
+  /* Tu color de marca morado */
+  color: white;
+  border-color: #bd0bf4;
+  font-weight: bold;
+}
+
+/* Estilo para el menú desplegable (select) */
+.form-select {
+  background-color: #343a40;
+  /* Un gris oscuro para el fondo */
+  color: white;
+  /* Texto blanco */
+  border-color: #bd0bf4;
+  /* Borde morado */
+}
+
+/* Cambia el color del texto cuando una opción está seleccionada */
+.form-select:focus {
+  border-color: #9a00c9;
+  box-shadow: 0 0 10px rgba(189, 11, 244, 0.6);
+  background-color: #343a40;
+  color: white;
+}
+
+/* Estilo para las opciones dentro del menú desplegable */
+.form-select option {
+  background-color: #212529;
+  color: white;
+}
 
 
 

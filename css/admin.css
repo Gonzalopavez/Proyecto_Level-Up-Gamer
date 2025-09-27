@@ -1,0 +1,47 @@
+/* Estructura principal del panel */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Barra lateral (Menú) */
+.sidebar {
+    width: 250px;
+    background-color: #212529;
+    /* Un gris oscuro de Bootstrap */
+    padding: 20px;
+    color: white;
+}
+
+.sidebar h3 {
+    font-family: 'Audiowide', sans-serif;
+    color: #bd0bf4;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-nav a {
+    display: block;
+    color: #adb5bd;
+    /* Un gris claro */
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: #bd0bf4;
+    color: white;
+}
+
+/* Área de contenido principal */
+.content {
+    flex-grow: 1;
+    /* Ocupa todo el espacio restante */
+    padding: 40px;
+    background-color: #121212;
+    /* Fondo oscuro para el contenido */
+}

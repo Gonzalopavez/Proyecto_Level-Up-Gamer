@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Usuarios | Panel de Administrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+</head>
+
+<body class="text-white admin-page">
+
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <h3>Panel Admin</h3>
+            <nav class="sidebar-nav">
+                <a href="admin.html"><i class="bi bi-house-door-fill"></i> Escritorio</a>
+                <a href="admin-usuarios.html" class="active"><i class="bi bi-people-fill"></i> Gestionar Usuarios</a>
+                <a href="admin-productos.html"><i class="bi bi-box-seam-fill"></i> Gestionar Productos</a>
+                <hr>
+                <a href="index.html"><i class="bi bi-arrow-left-circle-fill"></i> Volver a la Tienda</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1>Gestionar Usuarios</h1>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#user-modal"
+                    id="btn-crear-usuario">
+                    <i class="bi bi-plus-circle"></i> Crear Nuevo Usuario
+                </button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">RUN</th>
+                            <th scope="col">Nombre Completo</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col">Rol</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade" id="user-modal" tabindex="-1" aria-labelledby="user-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="user-modal-label">Crear Nuevo Usuario</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="user-form" novalidate>
+                        <input type="hidden" id="user-id-hidden">
+                        <div class="mb-3">
+                            <label for="form-nombre" class="form-label">Primer nombre</label>
+                            <input type="text" class="form-control" id="form-nombre" name="primernombre" required
+                                maxlength="50">
+                            <div class="invalid-feedback">Por favor ingresa tu nombre (máx. 50 caracteres, solo letras y
+                                espacios).</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="form-apellidos" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="form-apellidos" name="apellidos"
+                                maxlength="100">
+                            <div class="invalid-feedback">Por favor ingresa tus apellidos (máx. 100 caracteres, solo
+                                letras y espacios).</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="form-run" class="form-label">RUN</label>
+                            <input type="text" class="form-control" id="form-run" placeholder="12345678K" required
+                                minlength="7" maxlength="9">
+                            <div class="invalid-feedback">El run debe ser válido (ej: 12345678K).</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="form-correo" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="form-correo" name="correo" required
+                                maxlength="100">
+                            <div class="invalid-feedback">Por favor ingresa un correo válido con los dominios
+                                permitidos.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="form-password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="form-password" name="password" required
+                                minlength="4" maxlength="10">
+                            <div class="invalid-feedback">La contraseña debe tener entre 4 y 10 caracteres.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="form-tipo" class="form-label">Tipo de Usuario</label>
+                            <select id="form-tipo" class="form-select" required>
+                                <option value="Cliente">Cliente</option>
+                                <option value="Vendedor">Vendedor</option>
+                                <option value="Administrador">Administrador</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" form="user-form">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/admin-usuarios.js"></script>
+</body>
+
+</html>

@@ -5,6 +5,7 @@ const listaProductos = [
     nombre: "Tarjeta Gráfica RTX 4090",
     precio: 1899990,
     imagen: "img/productos/rtx.jpg",
+    categoria: "Hardware",
     descripcion: `Experimenta un rendimiento sin precedentes en juegos y creación de contenido con la GPU más potente del mercado.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -20,6 +21,7 @@ const listaProductos = [
     nombre: "Tarjeta Gráfica RTX 4070 Super",
     precio: 749990,
     imagen: "img/productos/rtxsuper.jpg",
+    categoria: "Hardware",
     descripcion: `El punto ideal entre precio y rendimiento. Juega los últimos títulos en 1440p con altas tasas de refresco y tecnologías de IA.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -35,6 +37,7 @@ const listaProductos = [
     nombre: "Tarjeta Gráfica AMD RX 7800 XT",
     precio: 629990,
     imagen: "img/productos/rx.jpg",
+    categoria: "Hardware",
     descripcion: `La competencia directa de AMD que ofrece un rendimiento excepcional en rasterización y una gran cantidad de VRAM para texturas de alta resolución.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -51,6 +54,7 @@ const listaProductos = [
     nombre: "Procesador AMD Ryzen 9 7950X",
     precio: 549990,
     imagen: "img/productos/ryzen.jpg",
+    categoria: "Hardware",
     descripcion: `Alcanza un rendimiento extremo en juegos y tareas de creación con la potencia de la arquitectura más avanzada de AMD.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -66,6 +70,7 @@ const listaProductos = [
     nombre: "Procesador Intel Core i7-14700K",
     precio: 489990,
     imagen: "img/productos/intel.webp",
+    categoria: "Hardware",
     descripcion: `Una bestia para el gaming y la productividad, con una combinación de núcleos de rendimiento y eficiencia para manejar cualquier tarea.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -82,6 +87,7 @@ const listaProductos = [
     nombre: "Monitor Gamer Curvo 32\" QHD Samsung",
     precio: 349990,
     imagen: "img/productos/monitor.webp",
+    categoria: "Periféricos",
     descripcion: `Sumérgete en la acción con una pantalla curva inmersiva y una tasa de refresco ultra rápida que te dará la ventaja competitiva.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -97,6 +103,7 @@ const listaProductos = [
     nombre: "Teclado Mecánico Custom RGB",
     precio: 129990,
     imagen: "img/productos/teclado-custom.jpg",
+    categoria: "Periféricos",
     descripcion: `Construido para entusiastas, este teclado 65% te permite intercambiar switches y keycaps para una experiencia de escritura única.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -112,6 +119,7 @@ const listaProductos = [
     nombre: "Mouse Gamer Ultraligero",
     precio: 64990,
     imagen: "img/productos/mouse-gamer.jpg",
+    categoria: "Periféricos",
     descripcion: `Movimientos rápidos y precisos con este mouse inalámbrico de solo 60 gramos. Diseñado para largas sesiones de juego sin fatiga.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -127,6 +135,7 @@ const listaProductos = [
     nombre: "Audífonos Gamer Inalámbricos 7.1 Logitech G935",
     precio: 99990,
     imagen: "img/productos/audifonoslogi.webp",
+    categoria: "Periféricos",
     descripcion: `Escucha cada paso y cada detalle con sonido envolvente 7.1. Su micrófono con cancelación de ruido asegura una comunicación clara.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -142,6 +151,7 @@ const listaProductos = [
     nombre: "Webcam Streaming 4K",
     precio: 159990,
     imagen: "img/productos/webcam.jpg",
+    categoria: "Periféricos",
     descripcion: `Lleva tus streams al siguiente nivel con calidad de video 4K Ultra HD. Sensor de alta calidad para una imagen nítida incluso con poca luz.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -158,6 +168,7 @@ const listaProductos = [
     nombre: "SSD NVMe M.2 2TB Gen4",
     precio: 119990,
     imagen: "img/productos/ssd.jpg",
+    categoria: "Hardware",
     descripcion: `Elimina los tiempos de carga. Con velocidades de lectura de hasta 7,000 MB/s, tu sistema operativo y juegos cargarán en un instante.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -173,6 +184,7 @@ const listaProductos = [
     nombre: "Placa Madre B650 AM5",
     precio: 219990,
     imagen: "img/productos/placa.png",
+    categoria: "Hardware",
     descripcion: `La base perfecta para tu procesador Ryzen 7000. Equipada con las últimas tecnologías para exprimir al máximo tu PC.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -188,6 +200,7 @@ const listaProductos = [
     nombre: "Silla Gamer Ergonómica Trust Gxt 707 Resto red Pro Gaming",
     precio: 189990,
     imagen: "img/productos/silla.jpg",
+    categoria: "Periféricos",
     descripcion: `Juega por horas con la máxima comodidad. Diseño ergonómico con soporte lumbar y cervical ajustable para cuidar tu postura.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -204,6 +217,7 @@ const listaProductos = [
     nombre: "Elden Ring: Shadow of the Erdtree",
     precio: 44990,
     imagen: "img/productos/elden-ring.jpg",
+    categoria: "Videojuegos",
     descripcion: `La esperada expansión del galardonado juego del año. Viaja a la Tierra Sombría y desvela un nuevo misterio en el universo de FromSoftware.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -219,6 +233,7 @@ const listaProductos = [
     nombre: "Helldivers 2",
     precio: 39990,
     imagen: "img/productos/helldivers2.jpg",
+    categoria: "Videojuegos",
     descripcion: `Únete a la lucha por la Supertierra en este shooter cooperativo. ¡Llama a tus amigos, elige tu equipamiento y esparce la democracia controlada!
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -234,6 +249,7 @@ const listaProductos = [
     nombre: "Cyberpunk 2077: Ultimate Edition",
     precio: 59990,
     imagen: "img/productos/cyberpunk2077.jpg",
+    categoria: "Videojuegos",
     descripcion: `Vive la experiencia completa de Night City. Incluye el juego base aclamado por la crítica y su expansión de thriller de espionaje, Phantom Liberty.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -249,6 +265,7 @@ const listaProductos = [
     nombre: "Baldur's Gate 3",
     precio: 49990,
     imagen: "img/productos/baldurs-gate3.jpg",
+    categoria: "Videojuegos",
     descripcion: `Reúne a tu grupo y regresa a los Reinos Olvidados en una historia de compañerismo y traición. El RPG definitivo, ganador de múltiples premios.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -264,6 +281,7 @@ const listaProductos = [
     nombre: "Starfield: Premium Edition",
     precio: 79990,
     imagen: "img/productos/starfield.jpg",
+    categoria: "Videojuegos",
     descripcion: `El primer universo nuevo en 25 años de Bethesda Game Studios. Crea cualquier personaje que desees y explora con una libertad sin igual.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -279,6 +297,7 @@ const listaProductos = [
     nombre: "Monitor 4K OLED 27\"",
     precio: 899990,
     imagen: "img/productos/monitor-oled.jpg",
+    categoria: "Periféricos",
     descripcion: `Experimenta una calidad de imagen sin igual. Con negros perfectos y colores increíblemente precisos, es el monitor definitivo para creadores y gamers.
         <br><br> <strong>Características Principales:</strong>
         <ul>
@@ -294,6 +313,7 @@ const listaProductos = [
     nombre: "Kit de Refrigeración Líquida 360mm",
     precio: 139990,
     imagen: "img/productos/liquid-cooling.jpg",
+    categoria: "Hardware",
     descripcion: `Mantén tu procesador a temperaturas bajas incluso en las sesiones de juego más intensas. Con iluminación ARGB para un look espectacular.
         <br><br> <strong>Características Principales:</strong>
         <ul>
