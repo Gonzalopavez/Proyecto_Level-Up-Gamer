@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const productModal = new bootstrap.Modal(document.getElementById('product-modal'));
     const productForm = document.getElementById('product-form');
     const modalLabel = document.getElementById('product-modal-label');
+    const btnCrearProducto = document.getElementById('btn-crear-producto');
 
     const formNombre = document.getElementById('form-prod-nombre');
     const formPrecio = document.getElementById('form-prod-precio');
@@ -52,6 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function abrirModalCrear() {
+        productForm.reset();
+        document.getElementById('product-id-hidden').value = '';
+        modalLabel.textContent = 'Crear Nuevo Producto';
+    }
+
     function abrirModalEditar(id) {
         const producto = productosEditables.find(p => p.id === id);
         if (producto) {
@@ -59,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('product-id-hidden').value = producto.id;
             formNombre.value = producto.nombre;
             formPrecio.value = producto.precio;
-            formDescripcion.innerHTML = producto.descripcion; //innerHTML para respetar el formato
+            formDescripcion.value = producto.descripcion.replace(/<br\s*[\/]?>/gi, "\n").replace(/<[^>]+>/g, '');
         }
     }
 
@@ -69,12 +76,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (esValido) {
             const id = document.getElementById('product-id-hidden').value;
-            const productIndex = productosEditables.findIndex(p => p.id === id);
 
-            if (productIndex !== -1) {
-                productosEditables[productIndex].nombre = formNombre.value;
-                productosEditables[productIndex].precio = parseFloat(formPrecio.value);
-                productosEditables[productIndex].descripcion = formDescripcion.value;
+            if (id) { // Estamos editando
+                const productIndex = productosEditables.findIndex(p => p.id === id);
+                if (productIndex !== -1) {
+                    productosEditables[productIndex].nombre = formNombre.value;
+                    productosEditables[productIndex].precio = parseFloat(formPrecio.value);
+                    productosEditables[productIndex].descripcion = formDescripcion.value;
+                }
+            } else { // Estamos creando
+                const nuevoProducto = {
+                    id: `prod-${Date.now()}`, // ID único basado en la fecha actual
+                    nombre: formNombre.value,
+                    precio: parseFloat(formPrecio.value),
+                    descripcion: formDescripcion.value,
+                    imagen: "img/placeholder.png", // Imagen por defecto
+                    categoria: "Sin categoría" // Categoría por defecto
+                };
+                productosEditables.push(nuevoProducto);
             }
 
             renderizarProductos();
@@ -100,6 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- EVENT LISTENERS ---
+    if (btnCrearProducto) {
+        btnCrearProducto.addEventListener('click', abrirModalCrear);
+    }
     productForm.addEventListener('submit', guardarProducto);
     productTableBody.addEventListener('click', (e) => {
         const target = e.target;

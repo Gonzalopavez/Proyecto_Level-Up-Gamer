@@ -101,32 +101,33 @@ const listaProductos = [
   {
     id: "prod-07",
     nombre: "Teclado Mecánico Custom RGB",
-    precio: 129990,
-    imagen: "img/productos/teclado-custom.jpg",
+    precio: 59990,
+    imagen: "img/productos/teclado.jpg",
     categoria: "Periféricos",
-    descripcion: `Construido para entusiastas, este teclado 65% te permite intercambiar switches y keycaps para una experiencia de escritura única.
+    descripcion: `Construido para entusiastas, este teclado Royal Klude RK R65 te permite intercambiar switches y keycaps para una experiencia de escritura única.
         <br><br> <strong>Características Principales:</strong>
         <ul>
-            <li>Formato compacto 65%.</li>
+            <li>Formato compacto 65% con 67 teclas.</li>
             <li>Switches Gateron Red (Hot-swappable).</li>
             <li>Cuerpo de aluminio y keycaps de PBT.</li>
             <li>Iluminación RGB por tecla totalmente personalizable.</li>
+            <li>Conectividad mediante USB-C, diseño firme y sólido para oficinas o setups gaming.</li>
         </ul>
     `
   },
   {
     id: "prod-08",
-    nombre: "Mouse Gamer Ultraligero",
-    precio: 64990,
-    imagen: "img/productos/mouse-gamer.jpg",
+    nombre: "Mouse Gamer Razer DeathAddler Essential",
+    precio: 29990,
+    imagen: "img/productos/mouse.jpg",
     categoria: "Periféricos",
-    descripcion: `Movimientos rápidos y precisos con este mouse inalámbrico de solo 60 gramos. Diseñado para largas sesiones de juego sin fatiga.
+    descripcion: `Construido para jugadores exigentes, este Razer DeathAdder Essential te ofrece desempeño y comodidad para largas sesiones de juego..
         <br><br> <strong>Características Principales:</strong>
         <ul>
-            <li>Sensor óptico de 26,000 DPI.</li>
+            <li>Sensor óptico de alta precision: 6.400 DPI.</li>
             <li>Diseño ergonómico y peso de 60g.</li>
-            <li>Conectividad inalámbrica de 2.4GHz de baja latencia.</li>
-            <li>Batería de hasta 80 horas de duración.</li>
+            <li>5 botones físicos: clic izquierdo, derecho, rueda, adelante y atrás.</li>
+            <li>Iluminación RGB en el logo, personalizable mediante software de Razer. (Light-up pequeño pero con estilo).</li>
         </ul>
     `
   },
@@ -148,17 +149,17 @@ const listaProductos = [
   },
   {
     id: "prod-10",
-    nombre: "Webcam Streaming 4K",
-    precio: 159990,
+    nombre: "Logitech Brio Ultra HD 4K",
+    precio: 229990,
     imagen: "img/productos/webcam.jpg",
     categoria: "Periféricos",
-    descripcion: `Lleva tus streams al siguiente nivel con calidad de video 4K Ultra HD. Sensor de alta calidad para una imagen nítida incluso con poca luz.
+    descripcion: `Construido para creadores exigentes, esta Logitech Brio Ultra HD 4K te ofrece nitidez y funciones profesionales para streaming, videollamadas o contenido de alta calidad.
         <br><br> <strong>Características Principales:</strong>
         <ul>
             <li>Resolución 4K a 30fps o 1080p a 60fps.</li>
-            <li>Enfoque automático y corrección de luz inteligente.</li>
-            <li>Campo de visión ajustable.</li>
-            <li>Micrófonos estéreo integrados.</li>
+            <li>Lente de cristal con auto-enfoque automático y tecnología HDR / RightLight que ajusta la exposición ante diferentes condiciones de luz.</li>
+            <li>Micrófonos duales omni-direccionales integrados; buen manejo de sonido ambiente.</li>
+            <li>Ángulo de visión (campo visual) de unos 90° (ajustable a 78° o 65° mediante software).</li>
         </ul>
     `
   },
@@ -216,7 +217,7 @@ const listaProductos = [
     id: "prod-14",
     nombre: "Elden Ring: Shadow of the Erdtree",
     precio: 44990,
-    imagen: "img/productos/elden-ring.jpg",
+    imagen: "img/productos/elden.jpg",
     categoria: "Videojuegos",
     descripcion: `La esperada expansión del galardonado juego del año. Viaja a la Tierra Sombría y desvela un nuevo misterio en el universo de FromSoftware.
         <br><br> <strong>Características Principales:</strong>
@@ -232,7 +233,7 @@ const listaProductos = [
     id: "prod-15",
     nombre: "Helldivers 2",
     precio: 39990,
-    imagen: "img/productos/helldivers2.jpg",
+    imagen: "img/productos/hell.jpg",
     categoria: "Videojuegos",
     descripcion: `Únete a la lucha por la Supertierra en este shooter cooperativo. ¡Llama a tus amigos, elige tu equipamiento y esparce la democracia controlada!
         <br><br> <strong>Características Principales:</strong>
@@ -248,7 +249,7 @@ const listaProductos = [
     id: "prod-16",
     nombre: "Cyberpunk 2077: Ultimate Edition",
     precio: 59990,
-    imagen: "img/productos/cyberpunk2077.jpg",
+    imagen: "img/productos/cyber.jpeg",
     categoria: "Videojuegos",
     descripcion: `Vive la experiencia completa de Night City. Incluye el juego base aclamado por la crítica y su expansión de thriller de espionaje, Phantom Liberty.
         <br><br> <strong>Características Principales:</strong>
@@ -264,7 +265,7 @@ const listaProductos = [
     id: "prod-17",
     nombre: "Baldur's Gate 3",
     precio: 49990,
-    imagen: "img/productos/baldurs-gate3.jpg",
+    imagen: "img/productos/baldurs.jpg",
     categoria: "Videojuegos",
     descripcion: `Reúne a tu grupo y regresa a los Reinos Olvidados en una historia de compañerismo y traición. El RPG definitivo, ganador de múltiples premios.
         <br><br> <strong>Características Principales:</strong>
@@ -280,7 +281,7 @@ const listaProductos = [
     id: "prod-18",
     nombre: "Starfield: Premium Edition",
     precio: 79990,
-    imagen: "img/productos/starfield.jpg",
+    imagen: "img/productos/star.webp",
     categoria: "Videojuegos",
     descripcion: `El primer universo nuevo en 25 años de Bethesda Game Studios. Crea cualquier personaje que desees y explora con una libertad sin igual.
         <br><br> <strong>Características Principales:</strong>
@@ -296,7 +297,7 @@ const listaProductos = [
     id: "prod-19",
     nombre: "Monitor 4K OLED 27\"",
     precio: 899990,
-    imagen: "img/productos/monitor-oled.jpg",
+    imagen: "img/productos/oled.avif",
     categoria: "Periféricos",
     descripcion: `Experimenta una calidad de imagen sin igual. Con negros perfectos y colores increíblemente precisos, es el monitor definitivo para creadores y gamers.
         <br><br> <strong>Características Principales:</strong>
@@ -312,7 +313,7 @@ const listaProductos = [
     id: "prod-20",
     nombre: "Kit de Refrigeración Líquida 360mm",
     precio: 139990,
-    imagen: "img/productos/liquid-cooling.jpg",
+    imagen: "img/productos/kit.jpg",
     categoria: "Hardware",
     descripcion: `Mantén tu procesador a temperaturas bajas incluso en las sesiones de juego más intensas. Con iluminación ARGB para un look espectacular.
         <br><br> <strong>Características Principales:</strong>

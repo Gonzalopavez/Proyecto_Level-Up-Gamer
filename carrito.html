@@ -7,39 +7,40 @@
 
 
 
+
     <title> Carrito de Compras | LEVEL-UP GAMER</title>
 
 
 
 
 
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Referencia a carpeta CSS -->
-
-
-    <link href="css/main.css" rel="stylesheet">
-
-    <link href="css/carrito.css" rel="stylesheet">
-
-
-
-
+    <!--  Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Referencia a carpeta css -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Referencia a carpeta css -->
+    <link href="css/carrito.css" rel="stylesheet">
+
+    <!-- Google Fonts para el logo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-
-
 
 </head>
 
 
 
-
-<!-- Barra de navegación Navbar -->
-
-
 <body class="d-flex flex-column vh-100">
+    <!-- d-flex flex-column vh-100 para que el footer quede abajo -->
+
+
+    <!-- Barra de navegación Navbar -->
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
@@ -59,8 +60,9 @@
                                 <i class="bi bi-house-door-fill"></i>
                             </a>
                         </li>
-
-                        <li class="nav-item mx-2"><a class="nav-link" href="productos.html">Productos</a></li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
                         <li class="nav-item mx-2"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
                         <li class="nav-item mx-2"><a class="nav-link" href="blogs.html">Blogs</a></li>
                         <li class="nav-item mx-2"><a class="nav-link" href="contacto.html">Contacto</a></li>
@@ -89,6 +91,14 @@
                                 <span id="username-display"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                                <li id="admin-panel-link" class="d-none">
+                                    <a class="dropdown-item" href="admin.html">Panel Admin</a>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
                                 <li><a id="logout-link" class="dropdown-item" href="#">Cerrar Sesión</a></li>
                             </ul>
                         </li>
@@ -97,6 +107,16 @@
             </div>
         </nav>
     </header>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -204,13 +224,27 @@
                 </div>
                 <button type="button" id="btn-iniciar-sesion" class="btn btn-primary-Entrar w-100 mb-2">Iniciar
                     sesión</button>
-                <!--<a href="#" class="d-block text-center mb-2">¿Olvidaste tu contraseña?</a>-->
+                <a href="#" class="d-block text-center mb-2">¿Olvidaste tu contraseña?</a>
             </form>
             <hr>
             <p class="text-center-no-tiene-cuenta">¿No tienes cuenta? <a href="Registro.html">Crear cuenta</a></p>
         </div>
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
 
 
     <footer class="bg-dark text-white pt-5 pb-4">
@@ -239,7 +273,7 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-light">Contacto</h5>
                     <p><i class="bi bi-geo-alt-fill me-3"></i>Talcahuano, Bío-Bío, Chile</p>
-                    <p><i class="bi bi-envelope-fill me-3"></i>contacto@levelupgamer.cl</p>
+                    <p><i class="bi bi-envelope-fill me-3"></i>Levelupgamer@level.cl</p>
                     <p><i class="bi bi-telephone-fill me-3"></i>+56 9 1234 5678</p>
                 </div>
 
@@ -249,19 +283,11 @@
 
             <div class="row align-items-center">
                 <div class="col-md-7 col-lg-8">
-                    <p>© 2025 LEVEL-UP GAMER – Todos los derechos reservados.</p>
+                    <p>© 2025 LEVEL-UP GAMER - Todos los derechos reservados.</p>
                 </div>
                 <div class="col-md-5 col-lg-4">
                     <div class="text-center text-md-end">
                         <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white fs-4"><i
-                                        class="bi bi-facebook"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white fs-4"><i
-                                        class="bi bi-twitter-x"></i></a>
-                            </li>
                             <li class="list-inline-item">
                                 <a href="https://www.instagram.com" target="_blank"
                                     class="btn-floating btn-sm text-white fs-4"><i class="bi bi-instagram"></i></a>
@@ -272,6 +298,10 @@
             </div>
         </div>
     </footer>
+
+
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

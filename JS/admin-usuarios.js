@@ -14,9 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const formPassword = document.getElementById('form-password');
     const formTipo = document.getElementById('form-tipo');
 
-    // ==========================================================
+
     // --- SECCIÓN DE VALIDACIÓN Y UTILIDADES ---
-    // ==========================================================
     const mostrarEstadoValidacion = (elemento, esValido) => {
         esValido ? elemento.classList.remove("is-invalid") : elemento.classList.add("is-invalid");
     };
