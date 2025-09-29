@@ -616,9 +616,62 @@ FIN PERSONALIZACIONDE POR QUE ELEGIRNOS
 
 
 
+
+
+
+
 /*===========================================
-  Ajustes de Espaciado Adicional para el Index
+ESTILOS PARA LA SECCION DE TESTIMONIOS
 ===========================================*/
+
+.testimonial-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #bd0bf4;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial-author {
+  color: #bd0bf4;
+  font-weight: bold;
+}
+
+.testimonial-meta {
+  font-size: 0.9rem;
+  color: #adb5bd;
+}
+
+
+
+
+
+
+
+
+/*===========================================
+Estilos para la seccion de marcas
+===========================================*/
+.brand-logo {
+  height: 40px;
+  /* Ajusta la altura de los logos */
+  filter: grayscale(100%) opacity(0.6);
+  /* Los pone en blanco y negro y semitransparentes */
+  transition: all 0.3s ease;
+}
+
+.brand-logo:hover {
+  filter: grayscale(0%) opacity(1);
+  /* Les devuelve el color y la opacidad al pasar el cursor */
+}
+
 
 
 
@@ -651,4 +704,29 @@ Estilos para el Footer
   transform: translateY(-3px);
   /* Se elevan un poco */
   color: #bd0bf4 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================================
+  Estilos para el Separador de Neón Estático
+===========================================*/
+.neon-divider {
+  border: 0;
+  height: 2px;
+  /* Hacemos la línea un poco más gruesa */
+  background-color: #fff;
+  /* Mantenemos la línea blanca */
+  /* Aumentamos la intensidad y el tamaño de la sombra */
+  box-shadow: 0 0 20px 7px rgba(189, 11, 244, 0.8);
 }
