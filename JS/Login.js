@@ -48,8 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         window.location.href = "admin.html";
                         break;
                     case "Vendedor":
-                        // Cuando implementes la vista de vendedor, la redirección irá aquí.
-                        // window.location.href = "vendedor.html";
+                        window.location.href = "vendedor.html";
                         // Por ahora, lo mandamos al index para evitar errores.
                         window.location.href = "index.html";
                         break;
