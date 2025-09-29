@@ -1,0 +1,50 @@
+/* Estilo para las tarjetas de Misión y Visión */
+.mission-card {
+    background-color: rgba(33, 37, 41, 0.5);
+    border-left: 5px solid #bd0bf4;
+    padding: 25px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.mission-card h3 {
+    color: #bd0bf4;
+}
+
+/* Estilo para las tarjetas de Perfil de Equipo */
+.team-card {
+    background-color: #212529;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #444;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(189, 11, 244, 0.4);
+    border-color: #bd0bf4;
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Imágenes circulares */
+    border: 5px solid #bd0bf4;
+}
+
+.team-divider {
+    border-color: #bd0bf4;
+    width: 50px;
+    margin: 1.5rem auto;
+    /* Centra la línea */
+    border-width: 2px;
+}
+
+.team-bio {
+    font-style: italic;
+    color: #adb5bd;
+}

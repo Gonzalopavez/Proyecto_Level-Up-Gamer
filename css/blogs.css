@@ -1,0 +1,42 @@
+.blog-post-entry {
+    background-color: #212529;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    padding: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog-post-entry:hover {
+    transform: scale(1.02);
+    /* Se agranda un poco */
+    border-color: #bd0bf4;
+    box-shadow: 0 10px 40px rgba(189, 11, 244, 0.3);
+}
+
+.blog-title {
+    color: #bd0bf4;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.blog-excerpt {
+    color: #adb5bd;
+}
+
+.blog-image-container {
+    border-radius: 10px;
+    overflow: hidden;
+    /* efecto de zoom */
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+    /* Transición suave para el zoom */
+}
+
+.blog-post-entry:hover .blog-image {
+    transform: scale(1.1);
+    /* Efecto de zoom al pasar el cursor */
+}
