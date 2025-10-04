@@ -1,0 +1,34 @@
+.btn.toggle-password {
+    background-color: #bd0bf4;
+    color: white;
+    border: none;
+    /* Elimina el borde para que el input-group se vea como un solo elemento */
+    border-radius: 0 0.35rem 0.35rem 0 !important;
+    /* solo redondea el lado derecho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.75rem;
+}
+
+
+
+
+
+
+.btn.btn.toggle-password:hover {
+    background-color: #fff;
+    /* fondo blanco al pasar el mouse */
+    color: #bd0bf4;
+    /* texto morado */
+    box-shadow: 0 0 10px #bd0bf4,
+        0 0 20px #bd0bf4,
+        0 0 40px #bd0bf4;
+    /* brillo estilo neón */
+}
+
+
+.btn.btn.toggle-password:hover i {
+    color: #bd0bf4;
+    /* morado neón solo para el ícono */
+}

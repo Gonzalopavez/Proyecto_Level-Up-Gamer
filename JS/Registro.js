@@ -89,7 +89,7 @@ const validarRUN = () => {
 
         const cuerpo = runLimpio.slice(0, -1);
         const dv = runLimpio.slice(-1);
-        
+
         let suma = 0;
         let multiplo = 2;
         for (let i = cuerpo.length - 1; i >= 0; i--) {
@@ -98,7 +98,7 @@ const validarRUN = () => {
         }
         const dvEsperado = 11 - (suma % 11);
         const dvFinal = dvEsperado === 11 ? '0' : dvEsperado === 10 ? 'K' : dvEsperado.toString();
-        
+
         return dv === dvFinal;
     };
 
@@ -167,10 +167,10 @@ const validarFechaNacimiento = () => {
     const hoy = new Date();
     const edad = hoy.getFullYear() - fecha.getFullYear();
     const m = hoy.getMonth() - fecha.getMonth();
-    
+
     // Si el mes actual es menor, o es el mismo mes pero el día actual es menor, aún no cumple años.
     const edadFinal = (m < 0 || (m === 0 && hoy.getDate() < fecha.getDate())) ? edad - 1 : edad;
-    
+
     const esValido = edadFinal >= 18 && edadFinal <= 115;
     mostrarEstadoValidacion(fechaNacimiento, esValido);
     return esValido;
@@ -210,7 +210,7 @@ const validarComuna = () => {
 
 const validarCodigoReferido = () => {
     const valor = codigoReferido.value.trim();
-     if (valor === "") {
+    if (valor === "") {
         mostrarEstadoValidacion(codigoReferido, true);
         return true;
     }
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
 regionSelect.addEventListener("change", () => {
     comunaSelect.innerHTML = '<option value="">Selecciona una comuna</option>'; // Limpiar comunas
     const regionSeleccionada = regionesYComunas.find(r => r.nombre === regionSelect.value);
-    
+
     if (regionSeleccionada) {
         regionSeleccionada.comunas.forEach(comuna => {
             const option = new Option(comuna, comuna);
@@ -271,20 +271,6 @@ regionSelect.addEventListener("change", () => {
 });
 
 
-// --- Lógica para mostrar/ocultar contraseñas ---
-document.querySelectorAll(".toggle-password").forEach(button => {
-    button.addEventListener("click", () => {
-        const input = document.getElementById(button.dataset.target);
-        const icon = button.querySelector("i");
-        if (input.type === "password") {
-            input.type = "text";
-            icon.classList.replace("bi-eye", "bi-eye-slash");
-        } else {
-            input.type = "password";
-            icon.classList.replace("bi-eye-slash", "bi-eye");
-        }
-    });
-});
 
 // --- Autoformato para fecha de nacimiento (dd/mm/aaaa) ---
 fechaNacimiento.addEventListener("input", (e) => {
@@ -303,9 +289,9 @@ form.addEventListener("submit", (e) => {
     e.preventDefault(); // Siempre prevenir el envío por defecto.
 
     const esValido = validarNombre() & validarApellidos() & validarRUN() &
-                     validarCorreo() & validarPassword() & validarConfirmPassword() &
-                     validarFechaNacimiento() & validarTelefono() & validarDireccion() &
-                     validarRegion() & validarComuna() & validarCodigoReferido();
+        validarCorreo() & validarPassword() & validarConfirmPassword() &
+        validarFechaNacimiento() & validarTelefono() & validarDireccion() &
+        validarRegion() & validarComuna() & validarCodigoReferido();
 
     if (esValido) {
         // Si todo es correcto, creamos el objeto de usuario.
@@ -323,11 +309,11 @@ form.addEventListener("submit", (e) => {
             codigoReferido: codigoReferido.value.trim(),
             tipo: "Cliente"
         };
-        
+
         try {
             let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
             if (usuarios.some(u => u.correo === usuario.correo)) {
-                 Swal.fire({
+                Swal.fire({
                     icon: 'warning',
                     title: 'Correo ya registrado',
                     text: 'El correo electrónico que ingresaste ya está en uso.'
@@ -336,7 +322,7 @@ form.addEventListener("submit", (e) => {
                 // 1. Guardamos al usuario en nuestra "base de datos" permanente.
                 usuarios.push(usuario);
                 localStorage.setItem("usuarios", JSON.stringify(usuarios));
-                
+
                 // 2. También lo guardamos en sessionStorage para el auto-login.
                 sessionStorage.setItem('currentUser', JSON.stringify(usuario));
 

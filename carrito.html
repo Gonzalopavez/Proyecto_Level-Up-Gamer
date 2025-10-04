@@ -22,9 +22,8 @@
 
     <!-- Referencia a carpeta css -->
     <link href="css/main.css" rel="stylesheet">
-
-    <!-- Referencia a carpeta css -->
     <link href="css/carrito.css" rel="stylesheet">
+    <link href="css/ojo-login.css" rel="stylesheet">
 
     <!-- Google Fonts para el logo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -204,16 +203,20 @@
                     <div class="invalid-feedback">
                         Ingresa un correo válido (@duoc.cl, @profesor.duoc.cl, @gmail.com).
                     </div>
-
-
-
-
                 </div>
+
+
                 <div class="mb-3">
                     <label for="loginPassword" class="form-label-canvas-contraseña">Contraseña</label>
-                    <input type="password" class="form-control" id="loginPassword" required>
-                    <div class="invalid-feedback">
-                        Ingrese su contraseña.
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="loginPassword" required>
+                        <button class="btn btn-outline-secondary toggle-password" type="button"
+                            data-target="loginPassword">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                        <div class="invalid-feedback">
+                            Ingrese su contraseña.
+                        </div>
                     </div>
                 </div>
 
